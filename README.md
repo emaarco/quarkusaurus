@@ -59,7 +59,3 @@ Or use container build:
 
 This project is licensed under the MIT License.
 
----
-
-*"Spring Boot is still booting up while Quarkus is already running like a cheetah on Red Bull!"*
-
