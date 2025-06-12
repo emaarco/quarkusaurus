@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    alias(libs.plugins.quarkus)
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.allopen)
-    alias(libs.plugins.quarkus)
 }
 
 repositories {
@@ -12,12 +12,8 @@ repositories {
     maven { url = uri("https://maven.repository.redhat.com/ga/") }
 }
 
-val quarkusPlatformGroupId: String by project
-val quarkusPlatformArtifactId: String by project
-val quarkusPlatformVersion: String by project
-
 dependencies {
-    implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
+    implementation(enforcedPlatform(libs.quarkus.bom))
     implementation(libs.bundles.quarkus.core)
     implementation(libs.bundles.quarkus.rest)
     implementation(libs.bundles.kotlin.support)

@@ -6,10 +6,3 @@ pluginManagement {
         mavenCentral()
     }
 }
-
-dependencyResolutionManagement {
-    repositories {
-        mavenCentral()
-        mavenLocal()
-    }
-} 
