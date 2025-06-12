@@ -1,0 +1,25 @@
+[versions]
+kotlin = "1.9.20"
+quarkus = "3.7.1"
+jackson-kotlin = "2.16.1"
+
+[libraries]
+quarkus-kotlin = { module = "io.quarkus:quarkus-kotlin", version.ref = "quarkus" }
+quarkus-resteasy-jackson = { module = "io.quarkus:quarkus-resteasy-jackson", version.ref = "quarkus" }
+quarkus-resteasy = { module = "io.quarkus:quarkus-resteasy", version.ref = "quarkus" }
+quarkus-arc = { module = "io.quarkus:quarkus-arc", version.ref = "quarkus" }
+quarkus-junit5 = { module = "io.quarkus:quarkus-junit5", version.ref = "quarkus" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson-kotlin" }
+rest-assured = { module = "io.rest-assured:rest-assured", version = "5.4.0" }
+
+[bundles]
+quarkus-core = ["quarkus-kotlin", "quarkus-arc"]
+quarkus-rest = ["quarkus-resteasy", "quarkus-resteasy-jackson"]
+quarkus-test = ["quarkus-junit5", "rest-assured"]
+kotlin-support = ["kotlin-stdlib", "jackson-module-kotlin"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+quarkus = { id = "io.quarkus", version.ref = "quarkus" } 

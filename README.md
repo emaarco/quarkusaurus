@@ -17,7 +17,7 @@ and cloud deployments.
 Run the application in development mode with hot reload:
 
 ```shell script
-./mvnw quarkus:dev
+./gradlew quarkusDev
 ```
 
 The Dev UI is available at http://localhost:8080/q/dev/
@@ -27,13 +27,13 @@ The Dev UI is available at http://localhost:8080/q/dev/
 Package your application:
 
 ```shell script
-./mvnw package
+./gradlew build
 ```
 
-This creates a `quarkus-run.jar` in `target/quarkus-app/`. Run it with:
+This creates a `quarkus-run.jar` in `build/quarkus-app/`. Run it with:
 
 ```shell script
-java -jar target/quarkus-app/quarkus-run.jar
+java -jar build/quarkus-app/quarkus-run.jar
 ```
 
 ### Native Build
@@ -41,13 +41,13 @@ java -jar target/quarkus-app/quarkus-run.jar
 Create a native executable:
 
 ```shell script
-./mvnw package -Dnative
+./gradlew build -Dquarkus.package.type=native
 ```
 
 Or use container build:
 
 ```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
+./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 ```
 
 ## 🔗 Useful Links
@@ -58,4 +58,8 @@ Or use container build:
 ## 🎨 License
 
 This project is licensed under the MIT License.
+
+---
+
+*"Spring Boot is still booting up while Quarkus is already running like a cheetah on Red Bull!"*
 
