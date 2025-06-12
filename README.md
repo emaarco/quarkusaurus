@@ -12,8 +12,6 @@ and cloud deployments.
 
 ## 🎮 Getting Started
 
-ç
-
 ### Development Mode
 
 Run the application in development mode with hot reload:
@@ -36,12 +34,6 @@ This creates a `quarkus-run.jar` in `target/quarkus-app/`. Run it with:
 
 ```shell script
 java -jar target/quarkus-app/quarkus-run.jar
-```
-
-For an über-jar:
-
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
 ```
 
 ### Native Build
