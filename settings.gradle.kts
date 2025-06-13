@@ -1,4 +1,4 @@
-rootProject.name = "quarkus-example"
+rootProject.name = "quarkusaurus"
 
 pluginManagement {
     repositories {
