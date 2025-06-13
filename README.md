@@ -1,4 +1,4 @@
-# 🦖 Quarkusaurus‚
+# 🦖 Quarkusaurus
 
 Welcome to Quarkusaurus, my personal playground for exploring Quarkus –
 a modern Java framework tailored for cloud-native applications.
