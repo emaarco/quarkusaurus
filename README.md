@@ -1,15 +1,18 @@
-# 🚀 Quarkus-Example
+# 🦖 Quarkusaurus‚
 
-Welcome to Quarkusaurus, my personal playground for exploring Quarkus – a modern Java framework tailored for
-cloud-native applications.
+Welcome to Quarkusaurus, my personal playground for exploring Quarkus –
+a modern Java framework tailored for cloud-native applications.
 This repository contains a quarkus example service built with Kotlin & Gradle.
-Its goal? To explore what Quarkus can offer – from fast startup times to cool developer tools – and see how loud this
-framework can roar. 🦕
+Its goal? To explore what Quarkus can offer –
+from fast startup times to cool developer tools –
+and see how loud this framework can roar. 🦕
 
 ## 🌟 What's Quarkus?
 
-Quarkus is a Java framework designed for fast startup times, minimal memory usage, and cloud-native environments.
-It’s especially great for microservices and container deployments – like a multi-talented dino that adapts to any
+Quarkus is a Java framework designed for fast startup times,
+minimal memory usage, and cloud-native environments.
+It’s especially great for microservices and container deployments –
+like a multi-talented dino that adapts to any
 environment and still has time to learn some tricks. 🦖
 
 ## 🎮 Getting Started
