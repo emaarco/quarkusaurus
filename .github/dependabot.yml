@@ -14,3 +14,5 @@ updates:
           - "patch"
           - "minor"
           - "major"
+    reviewers:
+      - emaarco
