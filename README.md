@@ -1,71 +1,123 @@
 # 🦖 Quarkusaurus
 
-Welcome to Quarkusaurus, my personal playground for exploring Quarkus –
-a modern Java framework tailored for cloud-native applications.
-This repository contains a quarkus example service built with Kotlin & Gradle.
-Its goal? To explore what Quarkus can offer –
-from fast startup times to cool developer tools –
-and see how loud this framework can roar. 🦕
+Welcome to Quarkusaurus, a full-stack task management application demonstrating modern development practices with Quarkus and React. 
 
-## 🌟 What's Quarkus?
+This repository showcases:
+- **Backend**: Kotlin-based Quarkus application with PostgreSQL persistence using hexagonal architecture
+- **Frontend**: React TypeScript application with Material-UI components
+- **Infrastructure**: Docker Compose setup for development
 
-Quarkus is a Java framework designed for fast startup times,
-minimal memory usage, and cloud-native environments.
-It’s especially great for microservices and container deployments –
-like a multi-talented dino that adapts to any
-environment and still has time to learn some tricks. 🦖
+The project explores what modern frameworks can offer – from fast startup times with Quarkus to reactive UIs with React – and see how loud this full-stack dino can roar! 🦕
 
-## 🎮 Getting Started
+## 🏗️ Project Structure
 
-### Development Mode
+```
+├── service/          # Backend (Quarkus + Kotlin)
+├── ui/              # Frontend (React + TypeScript)
+├── stack/           # Docker infrastructure
+└── docs/            # Documentation
+```
 
-Run the application in development mode with hot reload:
+## 🚀 Quick Start
 
-```shell script
+### Prerequisites
+- Java 21 or later
+- Node.js 18 or later  
+- Docker and Docker Compose
+
+### 1. Start the Database
+```bash
+cd stack
+docker compose up -d postgres
+```
+
+### 2. Start the Backend
+```bash
+cd service
+./gradlew quarkusDev
+```
+Backend runs at http://localhost:8081
+
+### 3. Start the Frontend
+```bash
+cd ui
+npm install
+npm run dev
+```
+Frontend runs at http://localhost:5173
+
+### 🎯 That's it! 
+Visit http://localhost:5173 to see the task management interface in action! 
+
+## 🌟 Features
+
+### Backend Features
+- **Hexagonal Architecture**: Clean separation of concerns with ports and adapters
+- **PostgreSQL Integration**: Persistent data storage with Flyway migrations
+- **Hot Reload**: Instant feedback during development with Quarkus Dev Mode
+- **Type Safety**: Kotlin for robust, expressive code
+- **Testing**: Comprehensive test suite with H2 in-memory database
+
+### Frontend Features  
+- **Modern React**: Built with React 19 and TypeScript
+- **Material Design**: Beautiful UI components with Material-UI
+- **Real-time Updates**: Responsive interface with loading states and error handling
+- **Code Quality**: ESLint and Prettier for consistent code style
+- **Fast Development**: Vite for lightning-fast builds and HMR
+
+## 🧪 Development
+
+### Backend Development (service/)
+```bash
+# Run with hot reload
+cd service
 ./gradlew quarkusDev
 ```
 
-The Dev UI is available at http://localhost:8080/q/dev/. It's perfect for experimenting and seeing changes instantly –
-like testing new tools in your dino lab without ever leaving the jungle. 🧪🌴
+```bash
+# Run tests
+cd service
+./gradlew test
+```
 
-### Packaging
-
-Package your application:
-
-```shell script
+```bash
+# Build application
+cd service
 ./gradlew build
 ```
 
-This creates a `quarkus-run.jar` in `build/quarkus-app/`. Run it with:
-
-```shell script
-java -jar build/quarkus-app/quarkus-run.jar
+### Frontend Development (ui/)
+```bash
+# Start dev server
+cd ui
+npm run dev
 ```
 
-With everything bundled and ready to go, you’re just one command away
-from setting your Quarkus creature loose in the wild. 🦕
-
-### Native Build
-
-Create a native executable:
-
-```shell script
-./gradlew build -Dquarkus.package.type=native
+```bash
+# Lint and format code
+cd ui
+npm run lint
+npm run format
 ```
 
-Or use container build:
-
-```shell script
-./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
+```bash
+# Build for production
+cd ui
+npm run build
 ```
-
-For maximum performance, this build runs fast and light –
-like a well-evolved dino built for speed and efficiency. 🏃‍♂️🦖
 
 ## 🔗 Useful Links
 
+### Backend Resources
 - [Quarkus Official Website](https://quarkus.io/)
-- [RESTEasy Guide](https://quarkus.io/guides/resteasy)
+- [Quarkus Guides](https://quarkus.io/guides/)
+- [Kotlin Documentation](https://kotlinlang.org/docs/)
+
+### Frontend Resources  
+- [React Documentation](https://react.dev/)
+- [Material-UI Documentation](https://mui.com/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Vite Documentation](https://vitejs.dev/)
 
 ## 🎨 License
 
