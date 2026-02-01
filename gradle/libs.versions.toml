@@ -1,7 +1,7 @@
 [versions]
 kotlin = "2.3.0"
-quarkus = "3.30.5"
-jackson-kotlin = "2.20.1"
+quarkus = "3.31.1"
+jackson-kotlin = "2.21.0"
 
 [libraries]
 quarkus-bom = { module = "io.quarkus.platform:quarkus-bom", version.ref = "quarkus" }
