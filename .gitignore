@@ -51,3 +51,19 @@ nb-configuration.xml
 
 # Agent
 .claude
+.claude/logs/
+
+# Conductor personal/machine-local overrides (shared config stays in settings.toml)
+.conductor/settings.local.toml
+
+# Kotlin incremental build cache
+.kotlin/
+
+# Playwright MCP session artifacts
+.playwright-mcp/
+
+# e2e (Playwright) — node + test output
+e2e/node_modules/
+e2e/test-results/
+e2e/playwright-report/
+e2e/blob-report/

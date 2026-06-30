@@ -1,0 +1,7 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+
+[scripts]
+setup = "cd e2e && npm install && npx playwright install chromium"
+run = "./gradlew quarkusDev -Dquarkus.http.port=$CONDUCTOR_PORT -Ddebug=$((CONDUCTOR_PORT + 1))"
+run_mode = "concurrent"
