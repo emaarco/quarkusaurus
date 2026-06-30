@@ -16,7 +16,9 @@ permissions:
 
 jobs:
   build-and-test:
-    name: Build, unit & e2e tests
+    # Keep this job name as "Build with Gradle" so it satisfies the existing
+    # required status check on `main` (consolidated from the old pre-merge.yml).
+    name: Build with Gradle
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
