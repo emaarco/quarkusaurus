@@ -1,7 +1,7 @@
 [versions]
-kotlin = "2.4.0"
-quarkus = "3.37.0"
-jackson-kotlin = "2.22.0"
+kotlin = "2.4.10"
+quarkus = "3.38.0"
+jackson-kotlin = "2.22.1"
 
 [libraries]
 quarkus-bom = { module = "io.quarkus.platform:quarkus-bom", version.ref = "quarkus" }
@@ -12,7 +12,7 @@ quarkus-arc = { module = "io.quarkus:quarkus-arc", version.ref = "quarkus" }
 quarkus-junit5 = { module = "io.quarkus:quarkus-junit5", version.ref = "quarkus" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson-kotlin" }
-rest-assured = { module = "io.rest-assured:rest-assured", version = "6.0.0" }
+rest-assured = { module = "io.rest-assured:rest-assured", version = "6.0.1" }
 
 [bundles]
 quarkus-core = ["quarkus-kotlin", "quarkus-arc"]
