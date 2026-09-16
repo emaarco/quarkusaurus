@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:b5c148ecdfa166c45521eadc61d847ba9e4869be457e4387e7e9ac6c3992ab57",
+  "claims": [
+    {
+      "id": "claim_899bbb524e194e5cb1967fa9362a9a4a",
+      "statement": "Task is an immutable, framework-free data class whose secondary constructor assigns a random UUID string id; CreateTaskService uses that constructor so ids are generated in the domain at creation time, and no invariants are enforced on title or description.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L18-L19",
+          "version": "repo-lines-v1:sha256:4e950316fe27a76acc2b6cb3f55ad4298531ae6305f92410bf43399709a0caef:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRlYWY2ZTVhMmJlNzMyNzc3NjdjOWUxNzAzNmNhMGQ5MDIyNTM4YzNmYTlmNDYxMThjZGE0NTgxYmY0OTMyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDAyMWVjMDFhN2UzOWRhYmFjYmE1ZjE3ZThkNzljMWFmMjNmNGIzZGM3Y2ExMTk5YzNiNjEwMmNjODliZjBlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWI2ODU0ZDYwNDk0NDgzMTc3NDdmMGNlY2NkMmYyNmZlN2NlYTliM2M3NmM5NmQ5MjQxYzMwNmY0YmRlYjQ5YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE2NGZiN2EwMGZkYjU4Zjk3Mzk3ZDYyNTUyY2FkNWQyNjllMzEyN2M4MmRmNTZiMjU5ZWU3Mzk1YjY5NDRkYSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/domain/Task.kt#L5-L15",
+          "version": "repo-lines-v1:sha256:134e72cbd49d5eb171f254fed4ca810bc22fb695e981de15fee2b1ad495067a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDJjMWI5OTFlYWI3OWZhMWRlNjY1ZWRiZjIyM2RmMWMxYTQ2NTRiNzZmZjE0MWQxNjFiMTljNjlhZjZiMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZGIwYzZkMTFhZjA3ZTFlZjAxODMzNzFhNjdiZjk5MGE0Mzk4ZjQ5ZjE0ZDc3YWZhNTcyMzljNTRlMzkyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4NjZjNWYyZWVjYTE2Mzc3ZjQxNDI0YTIzMGNlYzk3NzcxMDExNWI4MmM4YjU3YjhlNTYxNmI1ZTA3MjdmMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7888accf9a3b47f9841d96f648d10d31",
+      "statement": "Storage is abstracted by two outbound ports, SaveTaskPort (append) and LoadTasksPort (list all); there are no ports for lookup by id, update, or delete.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/port/outbound/LoadTasksPort.kt#L5-L7",
+          "version": "repo-lines-v1:sha256:b888778e3d5a8a429d0b4729265d39c4f4ad0ca720632917a429a5c306f8f8a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQyMTE0M2VjYjRjZjFmYjc1YjAzMWU1MDhkNmJkYjQzNjVhODRhODJkMmQ3N2ZmZmRlNmUyNTk3YzIzMmRhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZiMzRhODQyNjBkZjczMmNmNDExOWMxZGU4M2Q5ZTg1ZmYxNWU5NjBjYzBjZDFiZTk1ZTRjYmEzM2I1OGVlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/port/outbound/SaveTaskPort.kt#L5-L7",
+          "version": "repo-lines-v1:sha256:99f0260964807b5608beaf040a98a9808d3c53f220734dce7b968be1a36553f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY1OTQ0NTRlYWRhNmU1ZmUzYjNiMDQ5Mzc1NTBkNDc0NzgwMzg2YzkzZTA2YTU0YzA5ZjFiMDEwMjk2MDJjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZiMzRhODQyNjBkZjczMmNmNDExOWMxZGU4M2Q5ZTg1ZmYxNWU5NjBjYzBjZDFiZTk1ZTRjYmEzM2I1OGVlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_05cac4a99eb04a48a2d6055827e254e6",
+      "statement": "InMemoryTaskRepository is an @ApplicationScoped bean implementing both outbound ports over a private unsynchronized mutable list; saveTask appends and loadTasks returns the live list itself, so data is insertion-ordered, survives across requests, and is lost on application restart.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt#L8-L18",
+          "version": "repo-lines-v1:sha256:86fe6a462c9e98d2c974fe6da2ef8ba1c5a68ab23028c4e795f0481312bf7414:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjZWIzMDdhMTVjYjhkYWQ0ODJhNDI2NDA1MWI0NTE4ZWIyZmEyNWIxZmEwMGI0ODIwYzViNzIyOGU4ODY1YWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZGIwYzZkMTFhZjA3ZTFlZjAxODMzNzFhNjdiZjk5MGE0Mzk4ZjQ5ZjE0ZDc3YWZhNTcyMzljNTRlMzkyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmM2YyYWExMjQ5NWYzMWY3YjE5NzJmOTg3NWE5OTk5ZjJhYTc5YTJmY2IxZmYzZmQyOGU1N2QxZjU0YTgyNmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_04c51645e5204cce969a37a61194a0fb",
+      "statement": "The @QuarkusTest assertion that GET /tasks returns an empty array relies on each test application starting with a fresh in-memory store and no prior task creation.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt#L11-L13",
+          "version": "repo-lines-v1:sha256:e1844e4f44bf8166cad2e4d94c94970eb0738a49727477233818c14bf64b06e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDA0NGViZWQ3OWZlMzVmOTIwNjBjNDQyYWMxZTYyYzY4MGY5OTFkZmQ3MGU1Y2Q2OTJkZDNkZTgzZjNjMTZiNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGViMzA2ODdmNTkyZDk3NzAwN2ZkYmI2NjY0NDRkODg4ZWNlMWE3OTViNGNkNTkxNzc3Y2I5YjQzMGZmZTgzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzgzNTBmZGExNjhlOWI4ZWUwZjE0ODFhMDFiYjNhM2JlZDEzYWYyZjVjN2MzOWU1NmZmYjI3MDNjODM2NmMxZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVhMWNhMmIwMGI2YzU4MmRjMzBkOGIzMmQ5NTU5NTY4NzFlZjIzYzY0MmFiZmZkMjNhZmEyZWM3YTJiMjFjYSJ9"
+        },
+        {
+          "resource": "repo://src/test/kotlin/de/emaarco/TaskResourceTest.kt#L8-L17",
+          "version": "repo-lines-v1:sha256:02c60f821a45575112bcf1b41e90b210ab4dbec3f19f032b3a7c579d0337a3c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwM2I0ODEwMDMyZmI2NTJkMDRiZDQzMDc5YmYxOGJiZDY2MWE5NTgxZTVlMmYyMTdmZGM2ZGYzZjEwMTZmNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwMjYyM2Y4MmY4YmNjNTQyNmI2ZjZlZDRlODNmNTAyYTY4YzQzOTUzMjUyY2M2Nzc4MWYwNzUxMzM3NjFjYjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjczZGIwYzZkMTFhZjA3ZTFlZjAxODMzNzFhNjdiZjk5MGE0Mzk4ZjQ5ZjE0ZDc3YWZhNTcyMzljNTRlMzkyMGIifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

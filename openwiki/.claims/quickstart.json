@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:10069bd2768cadf0682efe485e202e55ffdfd1d223a1b46a56cba6828a0a371a",
+  "claims": [
+    {
+      "id": "claim_22c007524dd4469085dd43d02a74ed21",
+      "statement": "Quarkusaurus is a single Gradle-built Kotlin Quarkus service that serves both the /tasks JSON API and a static Dino To-Do page from the same artifact, requiring a Java 21 toolchain.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L11-L20",
+          "version": "repo-lines-v1:sha256:ef0e3221caa0f15142809c5350fa890f214c2f5eb272c0ea51dd3d63f0a05067:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3OWE5Mjc2ODgzM2M3OGVmODM0MTgzOTA3MzlkYjY1ZmNiZjEzZGNlNTI2MTNmOWZlODYxMDg3YzMzZmUwZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkYjI1MWI5ZmU5N2U4ZmY1ZTZkZjhjYmRlNDA5YTJmMDMxY2RkMjQxMmU5MjY3OGNkNDJiMDkzZTBkODk4NzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3ZjBlMmFlYjUwYmNhMmJlYjJmN2YzYmNiY2QwYzNjNTQ4MzFlMzQ5Mjc3NjQ0MDNiYmYyOTc0ZDEwOTRhMzIifQ"
+        },
+        {
+          "resource": "repo://build.gradle.kts#L36-L44",
+          "version": "repo-lines-v1:sha256:b77a9da08562a2d6c58cd0b09038fb522455091d5ae9d70697604f3d6c739307:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk2YmFlYjVkMWZjNGY3ZjUxOTM2NjFmZjU0MWZlYWU1MzY0ZmQwNWU2MDY0YzAzYWY2MWU5ZDBkZWUyZmEwNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODZmODMyZmUwNzgxZTIxZTEzMTk4MGMyN2YzODUzM2Y3NjNmODNlZWU1YWI5MTU2ZjQ4YjJjYzFmNjY2Njk4NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0b44b80a0fa443d1bd681e439962807d",
+      "statement": "The codebase follows a strict inward dependency flow: REST controllers depend on inbound use-case interfaces, services implement them and call outbound ports, and InMemoryTaskRepository implements those ports.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L3-L15",
+          "version": "repo-lines-v1:sha256:ca7a2fe4aee7dd6ece9fa862b03f9d8ff45e4e947e5c7d4ece34311e559690c1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5M2YzZDM0NTkyMzQ5YjcxNGFkZGVjOWFkOTIyYWRjMjJjMzQ0NzhlOWJiMWYyZjg3MjAwY2IyMDMzOWM0ODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5OGE2NzRjMTI0NWVlZDNhNzE0MTEwODAxMGI0MzdiYmU3YjRmNmJmMDI5ZjY4MDJhNzU2MTE1NGYxNjZhODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM4MGFmZDczNDFjYTg3NjlhM2RjYjBkODMyNTQwODliNjk3ODQwZGE2M2M1ODQxMDc0OTM0ZWI0YmRhZDM3ZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNDRmMTJkYmQxNGQyMzMzZjUzNzVjNTE4MjVhMjY0MGNiNDI0ZDUxMmEwYzA5MzA4ZDcwNGU3NGFhOWM2ZjMifQ"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt#L3-L9",
+          "version": "repo-lines-v1:sha256:dda6971885f2a3ddd563b846e91a49d5ff23073277141fe965bec2c2db8f3aa9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNlNzQyYzkxYWZhZDk3N2YyMzE2M2U5ZGI4YTMwNjIwMzAxN2MxYTViNDM0MTE2ZDMzOTM2Nzc3YjQzNTM1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzMwODg2NDYzNjgxNTM2NDE0YzA1ODEzM2VhOTdhMTliZjFkM2NmMWI0YjVjMDAxNDNiNTFmNDgzMGEzOWIyYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWRkODdmMTZiMDdmZWM1ZjNmYmMzNTFmNWUzNmFhMmU4YzYxMGM4NmUxNDU4ZmY3ZmM2MTNlMzNkOGU1YjJkMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWRjNTcxMzA3NmMxODVmMDY3YjFkNjZjM2M2YzE3NWQ2N2FiMDVlNWZmYThlZGFhN2FjYjMyNmEwNjgwYWQ3OSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L3-L12",
+          "version": "repo-lines-v1:sha256:7a138360ff8c6984c07faba915e65333512c89e14fed9e88cd6333f6a6e6f29d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5M2YzZDM0NTkyMzQ5YjcxNGFkZGVjOWFkOTIyYWRjMjJjMzQ0NzhlOWJiMWYyZjg3MjAwY2IyMDMzOWM0ODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5MDYyY2MwMjQ4ZDIxOTA1YWYxYzZmYTZjNGQ3NmUwMDFjMWVlYTVkZTFkNGI1ZWU2NDgyYzU2YTQzNTYxYTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2MzY5NGM0MjBkNzE1OTc2ZDQ4NWE0ZTAzYzVlNTg1OWEzNWQ4YjQ0MGRjYjk3ODc2MzJjZDdiY2IzMmI5NjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4ZTFmN2M1MTA3OGUxYTM4ZDgxNjc4OGU1NTVlMDgxMGY2ZWQwMWVhYzllZDUwYTQ5M2Q0NDkwODk0NDFlNjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_900366ecf0f544cfb102f95f9a96d418",
+      "statement": "Development commands are ./gradlew quarkusDev for dev mode, ./gradlew build to package build/quarkus-app/quarkus-run.jar with JVM tests, and npm test inside e2e/ for Playwright browser tests.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L31-L55",
+          "version": "repo-lines-v1:sha256:397cf40f1623f57bc6c42a69be5d0813b7e7f3a16082bd5c66cf3909e85969ee:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMjg2OGE0MzEzMjIxODkwZTkzYjE1ZDNiZDVmMmFmNzA3YTBlOWQ5OGJjMmQwZmVkNTM1ZDAwMjBiNGVjMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkNjc0ODE1MGU2ZmJhNjg3MzhmZGYzNzc3Mjg3Y2JiZjk3MWNmYTdmMGMxYjA5YjUwZGFhNjY5OGU4YjA4M2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU3YTE1ZDBlN2I1MTBhZTBhMjU5ZDZiNjA2MjA4ODEzNTgxZGYxMzZmODllN2IwYzliZGNiODQ0OTAwZGMwMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiMzUwZDM1M2NmOWI0NjE3OTBiNzU5MjUyNzBhNTIwMTgxOTE2Njk5MzI5YzI2Y2IzZGU0YjU4MDJlOTA3OTAifQ"
+        },
+        {
+          "resource": "repo://README.md#L78-L98",
+          "version": "repo-lines-v1:sha256:56198c82fa2ba4672e213f521e0caf29cd3ab24e756b4f8c4af78e2ad4c9a7f0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmMmYzNmZmZWRmOWE5OGRlNzdiZTM1NjBmYmRkNGQ5NDgzMzJlZWE0MGRhYjNhZjhmYzBmNjhmZTU3ZWQwNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1M2QzNzRjZTdmNjdkYWZiMjEzOTZhNjBiYjdiNzlmNWJlMzM3ZTFlODQ1YjdiNzZlNjlmYTU3YTQ5ZjhhNzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRhODRkNDBkMWFlNDdhMmJhNWU5ZTVhOTEyZjFhYzVmODBlNDdhYzAzN2VkNTk4YTE0ZWQ0OGY1NGJmMTczZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzNmE3MDZhNWEzZGJkOGQxNTgxZDE3ODJjMWJiZTA1ZDlhYmY5NmI0YjY2YjI2ZWMyNTcyYTkyZTliYTIwZGMifQ"
+        },
+        {
+          "resource": "repo://e2e/package.json#L6-L10",
+          "version": "repo-lines-v1:sha256:2c85bdf0431853da9fe9acbbdec11252fb0102fc315a75d81ac50e23a8281685:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQ4MzNkNTk0OWMwM2E0MGNhOTUyNDkxNjEwYTY2NTk2NDRiM2FhNDY2MzYyZjc5OTAyMGRiZjE5ODE1NDdkYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1Y2QyZmI0ZjNkZjg4NDUxNTI1NWIzOTUyM2YyZjhiNTQ3MmJlZWE5ZjU2NmZmY2EyMDRkYjgwMjU2MTA0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWQ0MjZkY2E0M2VhMTJiN2U1ZmYzMDA1NjU1OWE3MzFkYWEwZWE0YmM1MDEyZTVkMWM0NGE1MDhmYTczZDI4ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDRiN2JmN2I0MjZkNWI3OWU2YjdjOTViMDBjMjcwNmFhNDVjMGNlYjBkMGY0N2U0MzViNDZjZGJhOWI2NTgyMSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

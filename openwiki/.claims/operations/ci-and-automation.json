@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:8ea72c3ac4779532fec35d596f20a7b6e0c0f68e416d21861ccc08b8fa3469c1",
+  "claims": [
+    {
+      "id": "claim_5c72bf1511524802a4f805ed53b5352e",
+      "statement": "ci.yml runs on every pull request and on pushes to main, cancels superseded runs per ref, and its single job is named \"Build with Gradle\" because that name is the required status check on main.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/ci.yml#L3-L21",
+          "version": "repo-lines-v1:sha256:3f2008d5603d9964bc0d6763aa71a68084911ecfb835fc54e3189434ffaf7e34:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmZmY5YzAyMjgxMTNhMTk3N2Y1NzYwOWRlMjc1ZWI0NzBiMDg2NzBjYmE1ZjVlYjIzMTcyZTU5OTdiY2NkODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlZjUyZmYwZDQ0ZWU4NTAzOWEzOWU4ZWJlYzJkNDMzOGRhYjliMjVkNzFkNDE1NDIzOWFmMTNjY2RhYjdiNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFiY2I0NDM0MjI1ZDljMjU4Y2UxOTUxM2Y4MTUyYmM4YWQ5Y2MxMTMxNzM3ZjI3NWYwMzAzZThlNDIwNjMzYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkNzMxMTBmYmFkYzk2ZTU5OGIxZWE4YWQ4ZDdiMjAyNDE5ZjYzMzZjNDlmZmEyMjhmNWQ0MTgxZmQ2MGM1MDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e8c2d03f5e184a6eb7fe6844104b79a2",
+      "statement": "The CI job runs ./gradlew build (JVM tests and packaging) and then, in the same job, installs Playwright with Chromium and runs npm test in e2e/, uploading the Playwright report as an artifact even on failure.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/ci.yml#L34-L60",
+          "version": "repo-lines-v1:sha256:255513ea8eef7bb5ace71d3358e4819c74d354dac99e434afbd2ffeba4cef2f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0M2I3MDllN2IxNzVjYWFmZDI1MzQxMjE1NTUyZGJiZDdjY2NkZWI0MjNlODBjMDFjZmJmNDE0ZDQ3MWMxYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZjQ1ZDJiYzIxMDg5NWU2N2JkMWQyMGRhYWFjMWI1OTgyYTc2NjQwODI5ZmQxZjFiYjRhNjk5NTUyOTI5NDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNzlmNjNlZGQ3NTQwYWEwM2I0OGZmOWUxNmM4ZDM3OWNjZDBmNjhjYTAzYWU1ZGQ2MmFiMTNmOGFiYjRlZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a8ecc485111f4b55967e1545cd6f9667",
+      "statement": "Dependabot checks Gradle, the e2e npm package, and GitHub Actions monthly, grouping each ecosystem's patch, minor, and major updates into one pull request.",
+      "evidence": [
+        {
+          "resource": "repo://.github/dependabot.yml#L5-L44",
+          "version": "repo-lines-v1:sha256:1ead24b97304e4209a1957840e4b94faf8e6b09a633c5707703514c43d5878a6:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlMzYwZjRlMTg2NTdhMmU4Y2M4YTllZDc1ZjhiOTAyNjExNTZkMTM5N2FiNjZkMTM2Mjk2ZmFjNTI4YTJmMWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhNDQyYzQxOGQ3MDRiODNlZDI5Y2I1ZWZkYWY1MjE1YTQ5OWQxNjY2MTNiOTIyNjc5ZDE1MjZjNTgxNjhjMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmMTFlZjQ5MGRiZDIzNGJjMzA4N2I3MjMwZTQ5ZmYzNzJiZGE4YmQzZmUxN2VmNjcxN2E3MjhhNmNiZmI5N2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0d68cefcf281446abb44147c89df3538",
+      "statement": "dependabot-automerge.yml enables squash auto-merge only for Dependabot pull requests whose update type is semver patch or minor, retrying up to five times, leaving major updates for manual review.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/dependabot-automerge.yml#L11-L32",
+          "version": "repo-lines-v1:sha256:9a36b746ef5a92ca3972e6f39ae5437f2eb48099507e11f0d8544250b7c73bfc:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MTdiODI4OGQ0M2JjNjE0ZGU1Nzc2ZTk4Mzg4MmYwNTc0OWJlYWUwYWQzM2U3MmUxOGRlM2ViM2M2Y2E4YjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4OWM2ZDgyNmUzZTAyNGU4MDEyNjlhNGVkM2ExNzcyNjc4OWU2OWY2MjY4MDM5ZmMwYzNiMDI4Zjc3ZDI4NmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiMWNjNjZjZjU4MjBjMzA5NDdlYmIxY2IxZjk0MjQ2NjEyYzM2YjAxOTE1ZjFiODVkYjg1ZjJjNWYwNmRiYjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_423b36c34cdb49468a6bbd4b24fd81ab",
+      "statement": "openwiki-update.yml runs weekly (Monday 06:00 UTC) or on dispatch, drives OpenWiki through Claude Code with a restricted tool allowlist and continue-on-error, removes openwiki/.run.json, opens a signed pull request on branch openwiki/update, and enables auto-merge only if the OpenWiki step succeeded while failing the workflow otherwise.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L49-L63",
+          "version": "repo-lines-v1:sha256:745ea4563846cc385a786c3de506b0c333d6e239ea63e4336f70dc86fb586c44:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3ZDE0OGE1ODg4ZDRiMmZiMWVhODBmZGZkZjMwOTQwOTQ4NjgwMzljYjZmYjY1M2Y2M2ViNDlmMWJkMDNlMTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4NmU4M2U3Zjk2MWI1YTdjYWQ4ZWVmZmQ2YTNmNDFmODU3M2YwYmVkYTg0MWRkMjNmMjk2YzU3OTRlYTRiYzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3YmRjNzlmNWY1YThjMWQ2ZmJlZjM1NTE0ZTViMDY2NWZhNTgwNzc2ZGYxMWM5NmY1NDk2MGNkODFmNmY3NjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkZWVlZWUzZTEyMGQ5ZDEwNGI3NmU1YzcxYTYyMjZlNDVjMDkzNWNiNWM2ZjI1MTIyZTUyNTdmYjFjMzgyNDIifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L6-L19",
+          "version": "repo-lines-v1:sha256:6565af54af351d59773bc5b9e49f52d573464d37ba9bd09d02cc94bd8b523868:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0YTAxZjI4YjZiMDRkNDVjYWQwZmU2Yjg2MmQxYTgwMmQ3YzFiYzVlNzdlYjg4NTgwMGI4ZDkxY2Y3ZjQ0ODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE0YTliMmUwYTY3NWZkZmMzYzA0ODExN2Q5ODhlZDE4MTEzOTBmM2NiMjgwMWExYThlOWYzY2M0OTQxMWExMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNiYTVhZmZkODIzMWMwZTgxYmJjZDQyMTU0YTFjYzkwZTg2ZWZmNjYzNTVjMDQ4Y2U1NWIzMjM3YmRhYzNhMWQifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L65-L107",
+          "version": "repo-lines-v1:sha256:0c16e1e2f07233f865a745098388d610e2fd0ed0c9d8e31dbe1fe4a06cab7309:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxY2ZmNGFkMzNiYTkxYjE0OGUxYjFiODI5MGI4ZmZmMjdiMjAzZmFiZmVlNTg3MDI4MmRlMzY3MzgzYjFiZTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2NzE4ZjA2N2I1ZTVjMWYwOTkxYTZlNzQ3MjZmZTJhMjNkMjY0MzQ1ZTA4ZTRlYWQwNGZhZjczYzI3ZWQ0NDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVmZTVjYTdmYmJkMTk5YTZhZDgyZGU1MmY0ZWE2NDMxODVmNjM1MGE4MGJhNTJkNWFkN2VlYTMyNTY3NzUwYzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1e9680fa88944ab0b3b926b182b0155b",
+      "statement": "openwiki-pages.yml exports the OpenWiki visualizer to a site directory and deploys it to GitHub Pages whenever openwiki/** changes on main.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-pages.yml#L36-L52",
+          "version": "repo-lines-v1:sha256:b4f273926e84da9d806b76b317e738091270dddf54ba634cac050add205d7a27:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2Y2UwYjBkM2IzODEyMmJjMjc1MTVhOGQ5Njk2MTVkOWUxMGUyODA2NDRmNzYxMjIxZDA0NDc5YWQyNTM5M2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4ZWQ3NDA5N2Y5NTE5YTVhN2ZiYTRmYjYwYjkxYWM2NmU5ZTYwN2JjNWE4NjExZDhiMDEzMDk4ZDRjMjA4YzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhNjNkOWMzYWZiNTU1NDIxYTIxNzJmZWEyZTZkYzI2ZjFlOGFhZGE3NTZjOWJkOWI4YzBmNDVkNGYyMjYwZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/openwiki-pages.yml#L5-L10",
+          "version": "repo-lines-v1:sha256:16c0a7daca754dcbc68e34c5f94b74aa54e504169edcf8156ef7b91b8f23b2fd:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk2ZGM0ODE0OWY1YTgzZDFlZDZkYmIzOWJiYzdlMmI5MDJhYTNkMzRkNmJkNWFlNGIyOTFiNjhkZjBjYTc5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2YyZmE3M2YwNzA0ODlkOTcyNGEwMjlkZmI1MDJhYTA4ODUwN2QwODU3OWJiYmNjOTRlZDkzNWMxYTA1MzMxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjBjNDJiNDQ0NWEyZTdmZDg2Zjg5ODNlZDY5MGQ1MTIwZjZkNWU5MTdkNzE0MjhjNjE4N2FmNGJiMjcyYjk0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2UyNzQyMjRlOTgyODgxZDk4MWI4YWRkZmRkYzk4ODBiMmYxZDA3ODAzMTVkNzBkNWQ1MTkxYzc1Zjk1YTViMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d0e4387be52449a19142945f8c1c08a1",
+      "statement": "All third-party GitHub Actions in the workflows are pinned to full commit SHAs with version comments, and CODEOWNERS assigns every file to @emaarco.",
+      "evidence": [
+        {
+          "resource": "repo://.github/CODEOWNERS#L3-L3",
+          "version": "repo-lines-v1:sha256:27f8ad88366f58b3c5f36d196b7eca7771ecb430f3bea1e308b7a4617ded2f47:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdmOGFkODgzNjZmNThiM2M1ZjM2ZDE5NmI3ZWNhNzc3MWVjYjQzMGYzYmVhMWUzMDhiN2E0NjE3ZGVkMmY0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdmOGFkODgzNjZmNThiM2M1ZjM2ZDE5NmI3ZWNhNzc3MWVjYjQzMGYzYmVhMWUzMDhiN2E0NjE3ZGVkMmY0NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODM0Njk5NDg4YjU0MGY3ZTUyMDZlYjg2NTc3N2I1YTVjYWM0NjBhMjJmNTkwNjU0MTBhYjRlY2RhN2YzOTVhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/ci.yml#L25-L28",
+          "version": "repo-lines-v1:sha256:b9ff5d06e310a0f6921572f26c40a4f55b4d53dbb9def6a2244146d18ef554a1:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTYxZjEwMDgwYzM2NmZlMWMyYWU2MWIzMmZlZjgyMzUzZTU2ZjgxMjI3MGZhMjMxM2M5YjQzZDhiZjI1ZjdkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDM1ODA2MDMxZDdjYmFjMWJjMjJhMWVhM2Q0YmNiZmUzNGNiNTcxZWUwM2FkMDJhZDlmNjI4ZjA4MzVkMzlhYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGQ3MzExMGZiYWRjOTZlNTk4YjFlYThhZDhkN2IyMDI0MTlmNjMzNmM0OWZmYTIyOGY1ZDQxODFmZDYwYzUwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmQ4NzFhODhkYWY3ZjNkYTc5MzNmMDgyNDUwM2E2MTdhYTcxMGUwM2FkZTEyNjNmMjIyODI4OWUyOWUxM2VkZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1533730052e04d8f9bb4edb9a645caa4",
+      "statement": ".mcp.json registers the OpenWiki MCP server as the command `openwiki mcp --host claude`, used both by the update workflow and by local Claude Code sessions.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L56-L58",
+          "version": "repo-lines-v1:sha256:e9dbde7b43b13fef60aa14fa4f26236b38a675e8be46652a6f3b58111fd75fa3:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDJhZTY3NDUyYmMyMmJiNzc0MzMyNWU3YTdmYWYzYjE5ZTE4MjE2YWFhYzcwMmNmMTg0ODU3YjE3YTBlNjc0MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODZkNzQyM2ZiZTQ3NWU4ZTZkZWI5Zjg3ZTIwNzAzNTFmY2MzMmJjNTViN2MyYzkzOWM4MjU0NDQ5NTgyZTc0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWZhZGM4ODM2NTc2ZWRkZDFiZTY5MGNmYjA4MmE5N2Y4NDM5ODJiYzQ0ZThhYjUxYTc1Y2JhZWMxMjQ4YWI1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjEyZjg4ZTViMzc3YTE5YTg1MmI0ZWM3NzZlYWJiMjVkMmE3YjAxMWFlMmI1ZDlhNmY2NDAyNTE2MDkwYTAwNSJ9"
+        },
+        {
+          "resource": "repo://.mcp.json",
+          "version": "repo-file-v1:sha256:1217fe8aff83c5e31c83d562c6e21d66cc6745e870d49c737cf8a32df7c39ef3"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

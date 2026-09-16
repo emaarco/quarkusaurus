@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:9cb18e5a7ff15217d5559bfcdb1790abd2fffb2805abdb2ba6fa68a841d85421",
+  "claims": [
+    {
+      "id": "claim_d0b96ff3cb2e403c84978e8ef9d74d42",
+      "statement": "TaskResourceTest is a @QuarkusTest whose only test asserts GET /tasks returns 200 with the exact body [], pinning both endpoint wiring and the empty initial in-memory store.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/kotlin/de/emaarco/TaskResourceTest.kt#L8-L17",
+          "version": "repo-lines-v1:sha256:02c60f821a45575112bcf1b41e90b210ab4dbec3f19f032b3a7c579d0337a3c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwM2I0ODEwMDMyZmI2NTJkMDRiZDQzMDc5YmYxOGJiZDY2MWE5NTgxZTVlMmYyMTdmZGM2ZGYzZjEwMTZmNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwMjYyM2Y4MmY4YmNjNTQyNmI2ZjZlZDRlODNmNTAyYTY4YzQzOTUzMjUyY2M2Nzc4MWYwNzUxMzM3NjFjYjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjczZGIwYzZkMTFhZjA3ZTFlZjAxODMzNzFhNjdiZjk5MGE0Mzk4ZjQ5ZjE0ZDc3YWZhNTcyMzljNTRlMzkyMGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_05db8a4d83b448e6bb1c82e7100bb027",
+      "statement": "TaskResourceIT extends TaskResourceTest with @QuarkusIntegrationTest so the same test runs against the packaged artifact, which is why the Gradle test task depends on quarkusBuild.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle.kts#L32-L34",
+          "version": "repo-lines-v1:sha256:eeb6625a393af9095da327161393a4314de0470e21b3f7b5f435b864c5b96e90:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY2NjkzNGQ2OTA2ZjUyYzg5OTk1NTdiMDRhODc1MWQ4ZDIxNDI5NDI5NmFjODIzNjcxYjY4YTczNGU0MmQ5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjE5YzgxMmQyN2Q5OGExMTBiZDVjYjYyMjc5N2RiNjg3MzgwNjNkODc5MWM4NWNhYzcyYzQzYTk5MWJkYmU5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY2ZGNlNzI1YmJhZGRhYTgxM2E2YTJmODk4M2YyMGJiY2NhZTU0ZGViZGIwYmUwZTIwMTZiY2U0ZWE2MjExZCJ9"
+        },
+        {
+          "resource": "repo://src/test/kotlin/de/emaarco/TaskResourceIT.kt#L5-L8",
+          "version": "repo-lines-v1:sha256:e163e7fce4a0a953cff1bb72be8377838a0375c688f2d9d527a46954914872a5:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Q0N2UzNTMxODUyYjRiODlmNTE0NjY1YThlMzIyNzg1ODc4ZmJlYTI4ZTA3NTliYzBmNjhhYjBkN2MzNWEyYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWQyOGVmNzY2ODdiMDYzYmJkY2U5NWZiYzk5ZGMzNTJiNGVjZjhiM2IwM2EwYWNjMmIxMDc4YTQxZjFmZjgxYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_db0ea08230ac42588ad744cf373c8e99",
+      "statement": "The Playwright webServer boots java -jar ../build/quarkus-app/quarkus-run.jar and waits for http://localhost:8080/tasks; it reuses an existing server locally but not in CI, and the suite runs a single Chromium worker with one retry in CI.",
+      "evidence": [
+        {
+          "resource": "repo://e2e/playwright.config.js#L11-L31",
+          "version": "repo-lines-v1:sha256:73b30ea88dba60296e851da404ac8e4b31a489aa3a64dbdc2e61c83cffd3133d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3OWQyMjM0Nzk1ZDAzMzA1MjlhOTk5MzNiZmI2MzhlZGFhMmFhZmZiOGViOWFmNWZjN2U3OTc5M2MyZDc4ZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0ZjJkNTE5ZjljMjU1NzNlYzFmYWM2NzJkMjJhZWEyNGJkMzA3MWMxNGRkNzNmZWY1MTcyOTljMDYzZjM3MzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_95aee04dc0db4f22b1e197f8b76c8b7c",
+      "statement": "The Playwright suite has two tests: one checks the page renders its heading, Title field, and hatch button; the other creates a task with a Date.now()-suffixed title, expects it to appear in the nest with its description, and expects the title field to be reset.",
+      "evidence": [
+        {
+          "resource": "repo://e2e/tests/app.spec.js#L4-L32",
+          "version": "repo-lines-v1:sha256:733e3f8573062441eca30044667fbbb49d69678499925559e2dabec47e5b3549:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmMzFmM2I1M2VkZTc3YjQ0Njg5N2YyMWU3ZmYyNzg1NjM4MzU3YmI4MTI0YTExZDNlOGY0YjBjMGY3ZmU5MzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2MDUxM2M0OGFlYTYwYzlkMmVlZTE1MDg0MzE2Y2VmYzI5NmZlMTk1NjFkODIyOTcyNTE4NDdhYjUwODcxOGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0cfb34c414a5455a85aed86b3cc0eedc",
+      "statement": "No HTTP-level test covers POST /tasks or error paths; task creation is exercised only by the browser test.",
+      "evidence": [
+        {
+          "resource": "repo://e2e/tests/app.spec.js#L14-L31",
+          "version": "repo-lines-v1:sha256:8501162b30587420aa330b62a189e8c25b8d222a393ce85434cc2f414f6f5f1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzNWE5ZjQ3YTVjYjM3MmFlNTA0Mjk0M2FjYmU4ZTUwZTU1OWIxYTU0ZWNlMzQ5NDQ0YjE2MWViN2U2NzYyMDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhM2U0NmY5NDI3NmI2ZjZmNGVkMWYwMmFmNzhiZWY2YTJlZTFjNDM5ZGQ1NTg0Yjk3Mzk0ODMxMzIxNGQyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4YzI0NTU0MzRjYzY4MzkxNjAyMzdiYThiZTYwNmRiNmNjM2MyOTYzZTMwZDkwMmQ5YmY0Nzc3YWFjNjQ0MjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIifQ"
+        },
+        {
+          "resource": "repo://src/test/kotlin/de/emaarco/TaskResourceTest.kt#L10-L17",
+          "version": "repo-lines-v1:sha256:f22b71d009c31472b3abe598fcc45f2480684363f50e2e427fa17e1a0b4f6490:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNmMDllYjBjNTc0NGZiOTczMzFiOThmZjNmYmYwNWE2MDJiYTNmN2Y2N2U1ZGE1YmU5MDk1MDMzZjYyNTgyNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmQ0M2RmZGNjMjM3Mzg4OWQyNzcxYTQ3Njk4Njg5NDkzMjI0N2I1YTU0NmM4MzU2OWI2MTI3MzM3OGIyNDYxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

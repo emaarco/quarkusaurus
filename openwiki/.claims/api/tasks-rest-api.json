@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:62ca89fa80b2702f62944d66355969d6e64b37af7f41b5fdfd21ed6cfde3a6d7",
+  "claims": [
+    {
+      "id": "claim_035ab0a5134f4cd7bc5c4a7539a24aa1",
+      "statement": "The /tasks resource is split across two JAX-RS controllers: LoadTasksController handles GET and CreateTaskController handles POST, both declaring @Path(\"/tasks\") and producing JSON.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L9-L22",
+          "version": "repo-lines-v1:sha256:7f6ca4d1b19d2f22037de34b00d5f03bd65f807d77de35146bcd37b9a6038ccd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjZDgwOGE2Mjk2MDZkNGI1NzNlYjhjMmVkMTA0NjMxMjBiMDU4M2Q4MDY1ZWJjN2IwNDJjNjIxNzJkODIwMWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwNDEwN2Y1YzNlZmVhY2Y5NGFmMzA3M2JlZDYwMWYwZWI5Nzg3ZDRkNGZjOTA3MGFjYjQ5ZTMzZTM0OThmMzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMxNzM5MWQ2YWUwOTY0ZmE2N2E3YzM1N2MwMWJiNjRiMTIzOWEzNzJjYWE2OWNlZjRkNjFmYjU0NjRiM2U3OTcifQ"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/LoadTasksController.kt#L11-L22",
+          "version": "repo-lines-v1:sha256:6af6374448bceda22b7b30a99282e992f4e549021eae0934731578543d0dc8d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjZDgwOGE2Mjk2MDZkNGI1NzNlYjhjMmVkMTA0NjMxMjBiMDU4M2Q4MDY1ZWJjN2IwNDJjNjIxNzJkODIwMWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwNDEwN2Y1YzNlZmVhY2Y5NGFmMzA3M2JlZDYwMWYwZWI5Nzg3ZDRkNGZjOTA3MGFjYjQ5ZTMzZTM0OThmMzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjczZGIwYzZkMTFhZjA3ZTFlZjAxODMzNzFhNjdiZjk5MGE0Mzk4ZjQ5ZjE0ZDc3YWZhNTcyMzljNTRlMzkyMGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dc355844ca74492687eae9c6fe93f81d",
+      "statement": "POST /tasks responds with HTTP 200 and echoes the CreateTaskCommand (title and description) rather than the persisted Task, so the generated id is not included in the response.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L17-L22",
+          "version": "repo-lines-v1:sha256:8de05320137483eeb8ab784f171c20d277c6c3b577599c99b52b342b8892f043:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWMxMDkwOTJjNTgxYWIyZjg3ZjVkNTE5YTYzYWQ3ZTY2MDJmOWRmOTlmZmE1ZGY2ZGJkMjg3OTk2OTI3ZDY4YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzNmOWQ0ZTM4YzU1NzAxNDRjNDAwMDBlMmRmZmJkYzUxMDQ0MDZlZWYwMjQ4M2Y1MjQwOWM0ZTI1ZmJlNmNjOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzE3MzkxZDZhZTA5NjRmYTY3YTdjMzU3YzAxYmI2NGIxMjM5YTM3MmNhYTY5Y2VmNGQ2MWZiNTQ2NGIzZTc5NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b946dcbc42d74869ad99b4950ffd56ab",
+      "statement": "GET /tasks returns the full task list from LoadTasksUseCase unchanged, and on a fresh instance the body is an empty JSON array, which TaskResourceTest asserts literally.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/LoadTasksController.kt#L18-L22",
+          "version": "repo-lines-v1:sha256:6d7405979094da10db889b7ed5261dcfb9bf612c7c5434c57559fd8c7d3fff51:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFiM2RkMDU4NmE4NDVlNDViZjU1MWU1MzYxMDg2ZDQ1ODQwMmM2NDA5NWU1NzBjMDJkNzlmYTQyMTJiMmQ5OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNThjOGE2NzdkZTQ0NzNkYmVlMDBhMjlkYWI1NjNhMmYxZmIxNmRhYjg1NDkyMDdhMmZmZjU5NmMwNTcxYTFiOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        },
+        {
+          "resource": "repo://src/test/kotlin/de/emaarco/TaskResourceTest.kt#L10-L17",
+          "version": "repo-lines-v1:sha256:f22b71d009c31472b3abe598fcc45f2480684363f50e2e427fa17e1a0b4f6490:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNmMDllYjBjNTc0NGZiOTczMzFiOThmZjNmYmYwNWE2MDJiYTNmN2Y2N2U1ZGE1YmU5MDk1MDMzZjYyNTgyNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmQ0M2RmZGNjMjM3Mzg4OWQyNzcxYTQ3Njk4Njg5NDkzMjI0N2I1YTU0NmM4MzU2OWI2MTI3MzM3OGIyNDYxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec3c7721f54f40f78a87ee8bf0f84175",
+      "statement": "Controllers delegate directly to inbound use-case interfaces obtained via @Inject field injection; services perform no validation beyond logging and forwarding to outbound ports.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L14-L21",
+          "version": "repo-lines-v1:sha256:903b6d32053f1713bd1f80870a3a4528993fcf8285afe5e1a4c9fbb20ef29d28:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTE0MThkMjdlYmU4NTNjZWQ3OWEyYjZhNDM4MTI5MDE2NGZjOGI3NWM1OGM3NjRjOGFiYzc2ZTRlNjA1MDg3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3NzJkZDFjMTI5ZjZiMDJlMDc2NzJiZGJmYmRlYWY1NzAzZjkxMjY0ZTE1NzgwOWEyODlkYTU4YTk4OWM3MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2I4MWE4NDkzYmRmYTY0NDg2NmZkZGE1MGVlYjU1ZGY5NmM5NDlmYzFlODBjYzI5ZGYzMWE2NGJiODQ2OGU0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTgzMGE1YWEwZjVhNmEyNWExZjdiNzZlZjE5MmRjODc4N2JmMTFlYTlhMDYwODRkNWMxZDJiMjE4NzRmOTMxZiJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L16-L20",
+          "version": "repo-lines-v1:sha256:718978a54e7d16ca0dee229e3495c490b9b9e5da7e60f2d194e1a025fdecb91c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGIwZTg1YWU1ZTU5M2EyOThhM2E3ZGUxNjBkOTQ5ZjA4MWY4ZjhlNWRhN2U1YmVhN2NlMjUyMzEyYjc5ZTc2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzhlMWY3YzUxMDc4ZTFhMzhkODE2Nzg4ZTU1NWUwODEwZjZlZDAxZWFjOWVkNTBhNDkzZDQ0OTA4OTQ0MWU2MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/LoadTasksService.kt#L16-L19",
+          "version": "repo-lines-v1:sha256:ccc125392989c3928aeb74f67103f5ccd0373d9412209fc411dfa6e0f095be50:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGM3YTM4ZmNmZDAzYzQwMWNjYjZhMGI1YzYzMmUyMmI4ZWViNTJjNzVmMjI3ZmFlOTExZjkyZDk0MzEwYTMyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzM4ZmZhZWVlMWIwNDcwODU3YmQxYjljZGU4OWY5NjJhNGE5MDFhZGRkNmY3MmYxYjM3ODZhODBhNjAxM2U2OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_efb7da7f50eb4d129ce8c3f23246ba55",
+      "statement": "The API has no explicit validation, exception mappers, or security configuration; application.properties is empty so Quarkus HTTP defaults apply.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L24-L27",
+          "version": "repo-lines-v1:sha256:959ae3fc1ddb9abb367d8efe7c09c192a8c554ae6fea5d0073ea610b56771601:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdhZjBjZTZhNjAxYzUzMGU5Y2ZhYjY2N2UxYzI1MGZkMTc3MmRkYTgyMzk3NTdkODgzY2M0MzNiNGZlYzdjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjMWYxODhmMTQyZWQ3YTgyNDY4MGIyMDcxNzJjNTUxOWJjNjE0YTQ4ZmRhN2NmMTY3ZWRiOGRkZjc5OTU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQ2ZDNiYTYwNDViZjBlNTZjOWY0NzY5YmNmZjc1NWQ5NzdjZjcwNzdmMmVmMzhkNDAyYzk2YzBmYWFlZTQ0NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties",
+          "version": "repo-file-v1:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "id": "claim_58882750f55d49b0b0a983a8d2530ec0",
+      "statement": "The .bruno collection provides manual requests for loading and creating tasks against http://localhost:8080/tasks with a JSON title/description body.",
+      "evidence": [
+        {
+          "resource": "repo://.bruno/Create%20Task.bru#L7-L22",
+          "version": "repo-lines-v1:sha256:f1b79fafd47f3b9b3f748c861695227a14405d6f286b6af4db7b766c990a4620:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljZmZkNmExZGFjODk0YzI2ODkwNDNhYWI5YmYwOGU1NDczYzUxMjM4ZmI5YzJhZWM5OTdkNTY2MGJlZWY3YjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyMDVkYzkyYjgxMmEyZDA1ZmUyMzU0NWYzYWYzNGU3MmE3ODU0MGMzYjg1NzEzMjZlN2MwNGNkYzI3MjA1MmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}
