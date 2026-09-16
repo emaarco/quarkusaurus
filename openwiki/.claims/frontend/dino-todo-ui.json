@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:af31adad9019f42d4f7ea69d764c11005ba6d94175a335f0c5aa7db5a66612e9",
+  "claims": [
+    {
+      "id": "claim_4d213198d5f74ebba7073e7782da55f9",
+      "statement": "The frontend is a single static index.html under META-INF/resources with inline CSS and JavaScript, served by Quarkus at the root URL from the same jar as the API, and it calls the API only via the relative path /tasks.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L11-L20",
+          "version": "repo-lines-v1:sha256:ef0e3221caa0f15142809c5350fa890f214c2f5eb272c0ea51dd3d63f0a05067:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3OWE5Mjc2ODgzM2M3OGVmODM0MTgzOTA3MzlkYjY1ZmNiZjEzZGNlNTI2MTNmOWZlODYxMDg3YzMzZmUwZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkYjI1MWI5ZmU5N2U4ZmY1ZTZkZjhjYmRlNDA5YTJmMDMxY2RkMjQxMmU5MjY3OGNkNDJiMDkzZTBkODk4NzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3ZjBlMmFlYjUwYmNhMmJlYjJmN2YzYmNiY2QwYzNjNTQ4MzFlMzQ5Mjc3NjQ0MDNiYmYyOTc0ZDEwOTRhMzIifQ"
+        },
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L274-L280",
+          "version": "repo-lines-v1:sha256:97f40d26c56004de6fea650d16af29214fb8159796e06ff22a33c9c279b8ca02:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWM5Y2NlOGY2MTMzOTBkMjc3OGZkZWQ1ZjlhNWVjMTU1NWFiYjQ5MDM3N2E2MTBjMTcxMzFkNDNmZTdmNGJiYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzI3NjQxZTY3NzZkZjQ2MGExYmUwOTBhODRkYjUwZjUzOWQ2NTBiN2MxOWM5YjJjYjhkNGI0OWVhNjgzM2EyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTJkMjI4OGQzOTA4NzJiMTFlZjE2NTdhMjVlOWRkNWMyYTIzMjQyNTRjOGI1ZTQ4NzhjMzI1Y2MyYTk5M2YzZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmRlN2IwOWQ3NDE4MDI2MDhlNWViMDhlODE4Nzg3ZjdiNTQ0MTU3MDcwZmM1YTk2ZDg4OTM2NjFhNzdmMTA2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_edd534dc42aa4c6ca4c3abedee27148e",
+      "statement": "On load the page fetches GET /tasks and renders the count badge and one list item per task, showing an empty-nest placeholder when there are none.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L296-L323",
+          "version": "repo-lines-v1:sha256:02550e68aab3ec7157eed49b20fda7c6125313304ead2ae561478da31c5ad006:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwNWI0MDVjZjM4YjJmY2Q1M2YxZTRiYzYyNDgxOTY1NjA0NjNmZDgwM2I1NTY1MjYyOGE3MWYxODZjMzRkZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzOTcxODU3OTViMzRkNzc5OTBiZmYyNDY5MjNmZWYxNmJkMTZlZTI0NDI4ZWQwOGM2YTBlN2EyMjZkYTYzNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0YmZkYzU0OTAxOThlOTcxNTYwN2MyYTQwZmJhOTQ4MDQ3Mzc0OWFmZWRmYzFlYTBhZTgzYzNjM2MyNzdmYTYifQ"
+        },
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L351-L351",
+          "version": "repo-lines-v1:sha256:f2549b03c2b66862b243f225c5af75aff771082abddebd2a42036f8c72aded87:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI1NDliMDNjMmI2Njg2MmIyNDNmMjI1YzVhZjc1YWZmNzcxMDgyYWJkZGViZDJhNDIwMzZmOGM3MmFkZWQ4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI1NDliMDNjMmI2Njg2MmIyNDNmMjI1YzVhZjc1YWZmNzcxMDgyYWJkZGViZDJhNDIwMzZmOGM3MmFkZWQ4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWFmMDA3NjNiZTlmZjA3ZTdjMWM1N2RhM2YxODRlOGNmYjNhM2MyMGRjYmFmYzlhMjcyNzU1YjFkYzZhZTk1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDdkY2RmZmE3NDAxMzBkYjU2NTcyOTM3ZDgzYjZjMDM4OTJjMzg3ZWY0MTBiMmYzMmRiMTA5MDM0MDVlNGM2OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_facf2f5203494fe9b33796c0a4dceb4c",
+      "statement": "Submitting the form trims both fields, ignores a blank title, disables the button, POSTs JSON to /tasks, and on success resets the form, refocuses the title, re-fetches GET /tasks to refresh the list, and shows a success toast; the button is re-enabled in a finally block.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L325-L349",
+          "version": "repo-lines-v1:sha256:d924d6ea3d893f30cfdc7fecf1f1febb1b8444ae3c6c335cdb5907e035f3346e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5YjUxZDM1YTY2YzVmNmZhOTY0YjNlOWUyNzBhNGUxODdjMThjOWE4NzYxYjE4OGNlMDc0ZDhhOGRkODFjNTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZDExY2FmNDNlOTdlZjM2OWU2YmVlZDFhMjY4YmQwNTgzOGYyOWI5ZGQyNTRiZjY5YmE2NDg4NDE0NzIzNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0YjlhMGIxNmI5OTEwYmFhNWQwYTRkY2FmZjhhNjBjNDI5NjMzYmYyYWUzY2JhY2M4MjAyOTA3NTgwZDEwY2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxM2RkZDVmNTRmNTM3NjJmYTY3ODRlNzA5NjZjNzQ0MjQ5YmRjM2I4MzVjYjUxZWM2MjY5NTg1MDY1YjU1MGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0005153a3f0c4752867b0804ca55cd47",
+      "statement": "Both fetch paths throw on any non-ok response and surface failures as toasts plus console errors, with no retry; a failed POST keeps the form input.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L314-L323",
+          "version": "repo-lines-v1:sha256:da3d7810020ae3608d7a60af76f080b8262a5c4e456ac531c3b7c2599ba7a4ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyNDUyYmJjNGE4MWRhM2I0ZjhlMTBhNTEwMjdkNTcxNGNmNTQ1OTdiNzIxNmZmYzAwNTM5OGVjM2QzMmU5YWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlYTdlMzg0ZjUzYzk0ZWVmZTYwYWVhNTFkODUzMDJmZTg1OTRkZTYwZjdkNzBmYjNjZGRjOWRlZGQ1ZjkwYTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0YmZkYzU0OTAxOThlOTcxNTYwN2MyYTQwZmJhOTQ4MDQ3Mzc0OWFmZWRmYzFlYTBhZTgzYzNjM2MyNzdmYTYifQ"
+        },
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L338-L348",
+          "version": "repo-lines-v1:sha256:fe3f863e46016bfbc71d8871d575f1b38650f38e2e200503d95595c33054042d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkM2QyYTJlMTZkZmQ1MzdlYzk4NDliOGRmNWZkNGIxMzUzYjBhNjcyMGIwYzU1ZmE5MmVjODM5MTU1ZTkxMjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3NjBjMDNmYzA4YzQyOTNlYTg1ZDkxNGNiYmM3MjBjYTM3MTU2YWExZWJjMjc4NDM4M2QyZTdjNTZjNjUzZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlZDNmYjdkMzU2YmZlY2RiNzAwYmY0NjgyNWNiMGEzMmM4ZmJkNmQwMzYwODNkM2ZjNzNmY2E5MmI4NDRmMDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9654fee46d0e4bb6ba102a6c37f9d3fe",
+      "statement": "Task values are rendered via innerHTML but pass through escapeHtml, which escapes &, <, >, and double quotes, and this client-side escaping is the only injection defence because the API stores strings verbatim.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L282-L288",
+          "version": "repo-lines-v1:sha256:949b9c05464a9df93517c5b97d8e8bbd4712e475993a90d760c43f3321938735:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmE5MzQ3MDJjOWM3ODFlN2FlNzY2ODZjYjNjYjBjYzJmNGRjZWZhMWZlNDQ3ZDNlMTdiZTc1ZTkzM2RiNTM5ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWZiOGVmNDE5NjBmYmE1OWFjZmFlNzVjMGZlNjUwN2YxNzlmMmUxZjJkY2YzMmE1NDlkZmQ3ZjZhNDYxMDU1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjA5ZTY2YzkxNjI3YjM5ODljODQ3MGRkMmRlNDlkOTkzNzllNWNlMTA0NTM4MjlkNjczMzRiNjkxZTZkZTMyZSJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L303-L311",
+          "version": "repo-lines-v1:sha256:2785b882a6a73ea0c6a67f1253cd379468363338f625b6a93ad9c98784d24906:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2Y5YmUwMTUyYzIzOGFlMzE4NzAwMjZkNWU5MmQ2ODBjMDBkZGVjOTY1YjhhNDYzZTliNzhiZTdhOTA4ZWFkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzY2ZTFmMGEyMWJjOWNlMDY3NmU4YjNkYWRiNzBhYWU0NzI4ODU0ZDlhNDJhMGE1NDY2ZTk4NzNhYmQzNTViZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzA5YTJiZmNjYmJiNzA3MGZjOTJiNTlhNDkxMzg1M2VjZTNhZTJmN2E5MmU1OWYzZjViOGNjNzJiY2U5MWM0NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2E0MDNhM2Y0YmM4YmNjNjk0ZWY5NDlkMDMwNmJlOGY0OTUyMGYzNDI0MGI4Nzk0OTg0NmNhYjk2MjRhNTEzYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1fd0a4483f30486db0418ce27d793ae0",
+      "statement": "Client-side validation (required title, maxlength 120, trimming) exists only in the HTML form; the API performs no validation.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L17-L22",
+          "version": "repo-lines-v1:sha256:8de05320137483eeb8ab784f171c20d277c6c3b577599c99b52b342b8892f043:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWMxMDkwOTJjNTgxYWIyZjg3ZjVkNTE5YTYzYWQ3ZTY2MDJmOWRmOTlmZmE1ZGY2ZGJkMjg3OTk2OTI3ZDY4YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzNmOWQ0ZTM4YzU1NzAxNDRjNDAwMDBlMmRmZmJkYzUxMDQ0MDZlZWYwMjQ4M2Y1MjQwOWM0ZTI1ZmJlNmNjOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzE3MzkxZDZhZTA5NjRmYTY3YTdjMzU3YzAxYmI2NGIxMjM5YTM3MmNhYTY5Y2VmNGQ2MWZiNTQ2NGIzZTc5NyJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/META-INF/resources/index.html#L251-L251",
+          "version": "repo-lines-v1:sha256:78e804f0ce5169fda6cfcdf4dcf1a224b064924a908cdd9a898b61304dede57d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzhlODA0ZjBjZTUxNjlmZGE2Y2ZjZGY0ZGNmMWEyMjRiMDY0OTI0YTkwOGNkZDlhODk4YjYxMzA0ZGVkZTU3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzhlODA0ZjBjZTUxNjlmZGE2Y2ZjZGY0ZGNmMWEyMjRiMDY0OTI0YTkwOGNkZDlhODk4YjYxMzA0ZGVkZTU3ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjlhYTcyY2Q5NzMyZWE4ZGQ3Mzg1YjkyMmJmNjMyZjZkMzA3ZDcwZjY3NmVhYmFmMTEwNDhjNWNlMzliMjA5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWU2MmZkODUwZDI4OWY2MDFmYzc3NGI5YmY2ZTMzZTc4M2NkZTA0MjdhOTY2MmQ2YWM3YmM3N2JhYjY5NDkzYiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

@@ -114,6 +114,17 @@ just work:
 - **Run** starts `quarkusDev` on the workspace's assigned `$CONDUCTOR_PORT`
   (debug on `+1`), so multiple workspaces run side by side without port clashes.
 
+## 📚 Wiki
+
+An [OpenWiki](https://github.com/langchain-ai/openwiki) lives in [`openwiki/`](openwiki/):
+Markdown pages about the architecture, the `/tasks` API and the developer workflow,
+each grounded in the source with line-level evidence. Coding agents read it as
+memory, humans browse it as an interactive graph at
+[emaarco.github.io/quarkusaurus](https://emaarco.github.io/quarkusaurus/). 🦕
+
+A weekly [GitHub Action](.github/workflows/openwiki-update.yml) refreshes the
+pages for code changes and opens a docs PR; merges to `main` redeploy the site.
+
 ## 🔗 Useful Links
 
 - [Quarkus Official Website](https://quarkus.io/)

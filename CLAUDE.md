@@ -91,3 +91,11 @@ Version catalog: `gradle/libs.versions.toml`
 - Use `libs.bundles.*` for grouped dependencies
 
 Java/Kotlin toolchain configured for Java 21 in `build.gradle.kts`.
+
+<!-- OPENWIKI:START -->
+
+## OpenWiki
+
+@AGENTS.md
+
+<!-- OPENWIKI:END -->

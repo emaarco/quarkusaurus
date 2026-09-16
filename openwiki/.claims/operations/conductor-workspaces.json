@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:1c5fd8116f70efc6cf34133daa348d3fccb8673aaa3286614dffd919a5d8e122",
+  "claims": [
+    {
+      "id": "claim_939d899771004ac8a66a918da666670f",
+      "statement": "The Conductor setup script installs the Playwright package and Chromium into e2e/ once per workspace; no Gradle preparation is needed because the wrapper resolves toolchain and dependencies on first use.",
+      "evidence": [
+        {
+          "resource": "repo://.conductor/settings.toml#L4-L5",
+          "version": "repo-lines-v1:sha256:de67068c99918dce9ee68e9958dc621673c302aee11a513deded8d6bd9cf276d:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjJlMmI4MDExZTFiZGRhMGNiZDNjMjJhNWVhNGZmN2U3MDg4NmM1Y2QyZDY2YjY5M2U5OTY4MTU4YTliNTliNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmVjMWZjM2IxMmY0NThmZDlmZDg3OTk5MTI4ZGM3ZGM4YWZlMmIyMTMxNDAwM2Y1ZDk5MDVkZTcxYTk4ZTY5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTY4ZGFhODY2MDE0MjUxZTkyZTMzYzM5MGIzZWQ0YmE5ZDQ3YjFlYzNiMWViNTFhYmMzY2JmNzBlZTdmZmRiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTQ1NGVjOTAzYTM1NWY5NjlkNTE5MDlhNDlkNjVlZWFlM2YwZGIxYTc0ZmI5MjU3NzQ3NDc1OTVhYjgwZjFiZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_49283fe7b7a24d638837d7d4938ab47e",
+      "statement": "The Conductor run script starts quarkusDev with the HTTP port set to $CONDUCTOR_PORT and the JVM debug port to $CONDUCTOR_PORT + 1, and run_mode is concurrent, so multiple workspaces run side by side without port clashes.",
+      "evidence": [
+        {
+          "resource": "repo://.conductor/settings.toml#L5-L7",
+          "version": "repo-lines-v1:sha256:fd51220dfd68f72a7612c4502d582d7a293737a7a2af11da3ec363de14c1c566:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmVjMWZjM2IxMmY0NThmZDlmZDg3OTk5MTI4ZGM3ZGM4YWZlMmIyMTMxNDAwM2Y1ZDk5MDVkZTcxYTk4ZTY5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDYwYjkyNjFhNmQxYmEwY2YzNzQwZmYzNTYwMzUzZDc5YjNkNWQzODhlYmRlYjZmMWY1OWFlYTU1MGU3ZTIxNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjdiYmYxMDA0MGI0MDE3YjJiOWExY2ExOWRiMzAxYTE0NDI4Y2VlOTBiZmFiMTg5YmM0Y2QzZWE1NzliNzA1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2582b0061a6d463cb983e6588087a39d",
+      "statement": "The Playwright configuration hard-codes http://localhost:8080 for baseURL and the webServer health URL, so it does not reuse a Conductor dev server running on a different port.",
+      "evidence": [
+        {
+          "resource": "repo://e2e/playwright.config.js#L18-L31",
+          "version": "repo-lines-v1:sha256:16153fcf05d6ed57e88911958b212865623baa568c814f88b966d43231c29b8b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNDBlNzkyNDRiNDMxYmU5MDQwMGRhZTkzYmYzMDRhZDg5Y2VlNWY2NjJkM2M1NGU5NGFkNWI3ZjVlNjkxNDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEwMWNjNWIzZDJmNGJjMDgyYjA5ZDg2YzYzNWQxYmFkOWY0NTdhYjNhZTg5OTQyZDVmZjZhOTQ2MDAxODU3OTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

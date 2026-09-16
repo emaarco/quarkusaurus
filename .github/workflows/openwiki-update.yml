@@ -1,0 +1,107 @@
+name: OpenWiki Update
+
+# Refreshes the OpenWiki pages for source changes since the last documented
+# commit. Claude Code drives OpenWiki's MCP lifecycle using the Claude
+# subscription token, so no inference API key is needed.
+on:
+  workflow_dispatch:
+  schedule:
+    # Every Monday 06:00 UTC.
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: openwiki-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create app token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.RELEASE_PLEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_PLEASE_APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Full history so OpenWiki can diff HEAD against the last documented commit.
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22'
+
+      - name: Install OpenWiki
+        run: npm install --global --allow-scripts=better-sqlite3 openwiki@0.5.2 mermaid@11.16.0 jsdom@29.1.1
+
+      - name: Install OpenWiki skill for Claude Code
+        run: openwiki integrations install claude --project .
+
+      - name: Update OpenWiki with Claude Code
+        id: openwiki
+        continue-on-error: true
+        uses: anthropics/claude-code-action@7b0b255830a1fab6e602658672acad11c12d841d # v1.0.226
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "Update this repository's OpenWiki for changes since its last successful run. Use the openwiki skill and the openwiki MCP server."
+          claude_args: |
+            --mcp-config .mcp.json
+            --allowedTools "mcp__openwiki__openwiki_begin,mcp__openwiki__openwiki_submit_plan,mcp__openwiki__openwiki_next_page,mcp__openwiki__openwiki_inspect_page_claims,mcp__openwiki__openwiki_submit_page,mcp__openwiki__openwiki_finish,Read,Glob,Grep,Write,Edit,Bash(git rev-parse:*),Bash(git log:*),Bash(git diff:*),Bash(ls:*)"
+            --max-turns 120
+
+      - name: Remove transient OpenWiki run state
+        if: ${{ !cancelled() }}
+        run: rm -f -- openwiki/.run.json
+
+      - name: Create OpenWiki update pull request
+        id: create-pr
+        if: ${{ !cancelled() }}
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          sign-commits: true
+          add-paths: |
+            openwiki
+            AGENTS.md
+            CLAUDE.md
+          branch: openwiki/update
+          commit-message: "docs: update OpenWiki"
+          title: "docs: update OpenWiki"
+          body: |
+            Automated OpenWiki documentation update.
+
+            OpenWiki result: ${{ steps.openwiki.outcome }}
+
+            When the result is `failure`, this PR intentionally preserves only the
+            pages completed before the failure. A later successful run can update it.
+
+      - name: Enable auto-merge after a successful update
+        if: ${{ steps.openwiki.outcome == 'success' && steps.create-pr.outputs.pull-request-number != '' }}
+        run: |
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
+          gh pr merge --auto --squash "$PR_NUMBER"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_NUMBER: ${{ steps.create-pr.outputs.pull-request-number }}
+
+      - name: Disable auto-merge after a failed update
+        if: ${{ steps.openwiki.outcome == 'failure' && steps.create-pr.outputs.pull-request-number != '' }}
+        run: |
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
+          gh pr merge --disable-auto "$PR_NUMBER"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_NUMBER: ${{ steps.create-pr.outputs.pull-request-number }}
+
+      - name: Propagate OpenWiki failure
+        if: ${{ steps.openwiki.outcome == 'failure' }}
+        run: exit 1

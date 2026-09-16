@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c05a7e079b4b6df086036b3a5c522f01c996c1a597fcfd990e4064c1df939da7",
+  "claims": [
+    {
+      "id": "claim_e0a5672a6b6941c3baeff7cf2fae297d",
+      "statement": "Dependencies are declared only through the Gradle version catalog: the build imports the Quarkus BOM as an enforcedPlatform and adds the quarkus-core, quarkus-rest, kotlin-support, and (test) quarkus-test bundles rather than individual artifacts.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle.kts#L15-L20",
+          "version": "repo-lines-v1:sha256:b97d2ba49e14100763110d1e85f6d5425f47a42ccf66a8b3599fd8dd4b4d8961:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JhMzE0NWFlZTBkYTA1OTI0ZDNhZDBiMWVlYjRhZGU3NzYxYjY2N2Q4YTk2MTQ2ZGVlZjM5YWJkMWNlNDhjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmNkZjZiMTgzNmFkMTgwYzhiMTIwZjhlOTFiNzY1ZmEzNzFhZmNhOTNhYmNkYTQxOTRmMTdmMTNiMGIxMzk1OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjJmMzgxMzg1OTgxNDU1MTE5Mjc0N2RhYjc5YTk2MTUyNzFkOWJjYzgzYjdkMmZiOTUzZDNmOTFlZmRiMTg3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjUwZGZmNTJiZjk4NDhhMzZjOTM5YjgyOTA5Y2I5MjE1NzMwNDExODYzZmYyZjRiZDM2N2RlZThkYjJiNjFhYSJ9"
+        },
+        {
+          "resource": "repo://gradle/libs.versions.toml#L17-L21",
+          "version": "repo-lines-v1:sha256:e9d195806d2140c09b54a3c87fbf810c4ccd54228a719b8abe5f544b3b94ea37:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmQzMWU4OWU3ZjgxYWMyMTE2YjY2ZDY2OTg5ODY1NmE2YjExMzI4NzdiM2MxMWJjYjc4M2M0MGE0ZTQ4NWYyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTlkMjFiYjc2YTc1MmU1MTQ1Y2VmNGNhMzlmM2VkYmU2ZGIwYjYxMTBlZDg3MGIxMWRhNDFhOGM0MjYzMTExZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTVjNGUxMjBlNDI3NTJmMDhjYzg2ZmRlOTA2OWQ4YTliYzU1OWMxYTdiMzlkMTc0NTA2OTRhNGY4MTM4MjBjOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmI1YWRlMDJhNWY4ZjE3YjNiODMwYjUwZmJkNjNiODQ5ZDlkNWRlM2U4YzUxNTNjMGE2ZDNiYTVjYjU0MmQ0NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_697a7b725c0e43909e58fe25f5672c7a",
+      "statement": "The Gradle test task depends on quarkusBuild, so every test run first packages the application, which the @QuarkusIntegrationTest requires; all Test tasks also set java.util.logging.manager to JBoss LogManager.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle.kts#L28-L34",
+          "version": "repo-lines-v1:sha256:5dbfd65092773084fa2e8b0d8c4d9d9d237bba1faef7d149caaa50d1536b6f52:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY2NjkzNGQ2OTA2ZjUyYzg5OTk1NTdiMDRhODc1MWQ4ZDIxNDI5NDI5NmFjODIzNjcxYjY4YTczNGU0MmQ5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzE2MjEyMDNjNDdlZGIzY2M0NjRkZTljZDY0NDE5NTcyODBjZDBhNGQ1MWY0ZTIyNjk0NzhlYzU5ZjM4Y2QwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY2ZGNlNzI1YmJhZGRhYTgxM2E2YTJmODk4M2YyMGJiY2NhZTU0ZGViZGIwYmUwZTIwMTZiY2U0ZWE2MjExZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2a5f957ca652466f99a9a2f05b580c18",
+      "statement": "Both the Java and Kotlin toolchains are pinned to Java 21 in build.gradle.kts.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle.kts#L36-L44",
+          "version": "repo-lines-v1:sha256:b77a9da08562a2d6c58cd0b09038fb522455091d5ae9d70697604f3d6c739307:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk2YmFlYjVkMWZjNGY3ZjUxOTM2NjFmZjU0MWZlYWU1MzY0ZmQwNWU2MDY0YzAzYWY2MWU5ZDBkZWUyZmEwNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODZmODMyZmUwNzgxZTIxZTEzMTk4MGMyN2YzODUzM2Y3NjNmODNlZWU1YWI5MTU2ZjQ4YjJjYzFmNjY2Njk4NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_185e7a7556c941cbb2ae30aeabda30ce",
+      "statement": "application.properties is empty, so dev mode runs on Quarkus defaults (port 8080) and the port is overridden only via -Dquarkus.http.port, as the Conductor run script does.",
+      "evidence": [
+        {
+          "resource": "repo://.conductor/settings.toml#L5-L6",
+          "version": "repo-lines-v1:sha256:5a919f97b4c298deebaa64173f09ca820f15c6490c856ba8d0162297f8aaecd9:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmVjMWZjM2IxMmY0NThmZDlmZDg3OTk5MTI4ZGM3ZGM4YWZlMmIyMTMxNDAwM2Y1ZDk5MDVkZTcxYTk4ZTY5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgyYzQ3ODVlMmFkMjgwZjdhNDA0NzNlNDQyM2M0NjdjNjhhN2U4NjdkYWNiNzc4ZDliNjEyYTZmNThjZTljMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjdiYmYxMDA0MGI0MDE3YjJiOWExY2ExOWRiMzAxYTE0NDI4Y2VlOTBiZmFiMTg5YmM0Y2QzZWE1NzliNzA1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDYwYjkyNjFhNmQxYmEwY2YzNzQwZmYzNTYwMzUzZDc5YjNkNWQzODhlYmRlYjZmMWY1OWFlYTU1MGU3ZTIxNCJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties",
+          "version": "repo-file-v1:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "id": "claim_428755702ae9468eb2884cebbbbe6dcd",
+      "statement": "The four Dockerfiles under src/main/docker and the .dockerignore copy artifacts from Maven's target/ directory, whereas this Gradle project outputs to build/, so images cannot be built from them without relocating artifacts or adjusting COPY paths.",
+      "evidence": [
+        {
+          "resource": "repo://.dockerignore",
+          "version": "repo-file-v1:sha256:39b0bd3b7287783b4c4a24b533ea13483f7b7c7f59d2b5d9eb7c3f0ca1786d35"
+        },
+        {
+          "resource": "repo://src/main/docker/Dockerfile.jvm#L85-L94",
+          "version": "repo-lines-v1:sha256:af21ae6daa2c559c35c385f2a43030344483c846d6659ba77972825def52951d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0NzZmOTgyYjc0ZTczNjJiMTkzNmZmODRlMjE0OTQxZTA0NjI1ZGViN2NkNWNjNTViZDQzMThhMjZhZDBjZDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiYmExODk5Njc2NDk1MmU1YjQ2YjY1NjdjNTg3NjM1N2Y1MTQ2NDA3OTdmYzJjZjU3NzE1YTQ5ZGZhNjYwNzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0NTFiYmUzYTEzMzI0MWFkZWZkYWYxODgzZDgxNTAwODU1MDE0ZDc5NTk1YWUzZTdiOTcxMDY2MTBiMTdkMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFiYjcwMDU2YWY0ZjIzZjhiOWQ3MWRjNDQ1OTU3NmQyMDM4YjZhZDI3Nzc5YmViMjUyOTU1ODEwOGNlNjU1YzUifQ"
+        },
+        {
+          "resource": "repo://src/main/docker/Dockerfile.native#L22-L27",
+          "version": "repo-lines-v1:sha256:8dbdc74a8a7ad04dc862f33898175bb4a8e72a65a075d423ee85e9e2e88bbf19:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGVkZjgzNjM5OWJkMjQ4ZjFmYWQ3NTIyZTFkYWNkNzEwZmIxYmExMjQ2NjNmN2Y1NDM5ZGVkOGVhZjY1OTYzMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmJjN2UyZjEyNjVlZTdkMGIzYTk3YWZlYmRjMTBmOTg0NjhiNDFmNTVjYjM3YTUwNjM2NzNiYmY1YTc5NzRkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGZhMmI3YWZjMjc1Y2U1Nzg2MzMxN2RlYzVhY2FjOTg3YzE2NjM2ODU5ZWFkNDQ2OTA0ZWE0MmIzMmIyNDc5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f8141cf09d84ad68b6651b4a05e6549",
+      "statement": "The IntelliJ run configuration in .run/TestApplication.run.xml invokes the Maven goal quarkus:dev against a pom.xml that does not exist in this Gradle project, so it is stale.",
+      "evidence": [
+        {
+          "resource": "repo://.run/TestApplication.run.xml#L14-L20",
+          "version": "repo-lines-v1:sha256:d86c097c81e8d492ec49cc561b72efe68403cefd3e62209ade1aaeda7bb32c25:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWYxZDk1NDkxNWI5ODdhMzVlMjgzMzk4N2RjNzliNWIxOTFjMDU5MDJiODE0NWM3NTBjYzE1ZDZmOGZhNjYyYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFmZjQ1ODRkY2YwYWI1MGY0ZjBiYmFiMzM5NDE5NDg0MTUzZjc2MGZmNWZkOWExOThjZjJiNjgwYzMyMzk0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGY1NzA2ZTVhNWE4MjA5MGU4OTY3NWJkMDY3ZmY2OTgyOTg1MGIzZDA0ZjRmZGNjZDc5MGU3ZGFhZjkyYWMxYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDNhNmY5MTdlZGQ1YWU0MDNiNjQ2ZWM3YTE5YWM5MTk3N2E1ZDdkNmU3N2I2ODVkNGE1NGZiYzBhNmQwNWUyOSJ9"
+        },
+        {
+          "resource": "repo://settings.gradle.kts#L1-L8",
+          "version": "repo-lines-v1:sha256:48b9230d9f36521e03e014c731cb6aa44ce85b93a87a955ce7f2bd718d45e8f7:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWVlN2E1MThhOWY2MDA5MDRiNTFjMmQ1NDUyMGY3MWVkNzdlNzUwOTA4NzA4OWVjYmJkYzA4MzBkZjQyMzVlYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}

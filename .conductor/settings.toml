@@ -3,5 +3,15 @@
 
 [scripts]
 setup = "cd e2e && npm install && npx playwright install chromium"
-run = "./gradlew quarkusDev -Dquarkus.http.port=$CONDUCTOR_PORT -Ddebug=$((CONDUCTOR_PORT + 1))"
 run_mode = "concurrent"
+
+[scripts.run.app]
+available_in = [ "local" ]
+command = "./gradlew quarkusDev -Dquarkus.http.port=$CONDUCTOR_PORT -Ddebug=$((CONDUCTOR_PORT + 1))"
+default = true
+icon = "play"
+
+[scripts.run.wiki]
+available_in = [ "local" ]
+command = "npx --yes openwiki@0.5.2 visualize openwiki --port $((CONDUCTOR_PORT + 2)) --no-open"
+icon = "book-open"

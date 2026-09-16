@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:fdcbac1e82a440b373778b60734c5052e6f0637de2f1a61e47180b39fc04d928",
+  "claims": [
+    {
+      "id": "claim_662b53eeee504fcd9d26ad005cc8d67e",
+      "statement": "Production code is layered into domain, application (inbound ports, outbound ports, services), and adapter (inbound REST, outbound repository) packages, with dependencies pointing inward: controllers depend on inbound port interfaces, services implement inbound ports and depend on outbound ports, and the domain depends on nothing.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt#L1-L15",
+          "version": "repo-lines-v1:sha256:d835b1433fd53fa350e1e3403872e76f7081dc18b2f1ee98ca46e346265b7147:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjY2E1ZjZlMDc2ZmZmZjZiYzkyNTFmOWQwMWZjNzY2NDg0NTMyMWJhYzdlYTFlN2YxZWEwMWI3NjliMjRkYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5OGE2NzRjMTI0NWVlZDNhNzE0MTEwODAxMGI0MzdiYmU3YjRmNmJmMDI5ZjY4MDJhNzU2MTE1NGYxNjZhODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNDRmMTJkYmQxNGQyMzMzZjUzNzVjNTE4MjVhMjY0MGNiNDI0ZDUxMmEwYzA5MzA4ZDcwNGU3NGFhOWM2ZjMifQ"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt#L1-L9",
+          "version": "repo-lines-v1:sha256:ccdeeb0af4dc1e15ab4bc7e022f6b5d0c5128dd134c3da5825c66f8ea5ea0670:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI2NzBhMTBlMDQyYjA1ODg3ZTMwZDYwZmJmNzIwNjA5YzQ4ZDk2M2FjYzU0NGYwYWU3ZmViYjlmY2FhYjM5ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzMwODg2NDYzNjgxNTM2NDE0YzA1ODEzM2VhOTdhMTliZjFkM2NmMWI0YjVjMDAxNDNiNTFmNDgzMGEzOWIyYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWRjNTcxMzA3NmMxODVmMDY3YjFkNjZjM2M2YzE3NWQ2N2FiMDVlNWZmYThlZGFhN2FjYjMyNmEwNjgwYWQ3OSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L1-L12",
+          "version": "repo-lines-v1:sha256:f1783c02985e975a9063201e74fa516342b7b885054057b4fb5bca29e01c1f14:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyY2FkYzQ2OTNiODZiNWNjZjk1ZmM2NGYxMDQ5MzY1NzEwOWRiMjdiM2MyNTRlNjk0Yzc2ODc5ZTk3NWNhZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5MDYyY2MwMjQ4ZDIxOTA1YWYxYzZmYTZjNGQ3NmUwMDFjMWVlYTVkZTFkNGI1ZWU2NDgyYzU2YTQzNTYxYTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4ZTFmN2M1MTA3OGUxYTM4ZDgxNjc4OGU1NTVlMDgxMGY2ZWQwMWVhYzllZDUwYTQ5M2Q0NDkwODk0NDFlNjAifQ"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/domain/Task.kt#L1-L15",
+          "version": "repo-lines-v1:sha256:2ab8319a4bb9f1a60b708bc32b8d29ec7ca28dd470624db63bb75956bf78bec2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiZWMxMTljYTYzZjU3N2QyYTEzMWNiNjQ3MjJjMDA4N2VmNzMwN2E4MDM0NzY0NTZhYWRkYjZjNGE0N2NlYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZGIwYzZkMTFhZjA3ZTFlZjAxODMzNzFhNjdiZjk5MGE0Mzk4ZjQ5ZjE0ZDc3YWZhNTcyMzljNTRlMzkyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4bbf31e1d370443c9c75b0b17a4ee060",
+      "statement": "Outbound ports SaveTaskPort and LoadTasksPort are separate single-method interfaces so each service declares only the dependency it uses: CreateTaskService injects SaveTaskPort and LoadTasksService injects LoadTasksPort.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/port/outbound/LoadTasksPort.kt#L5-L7",
+          "version": "repo-lines-v1:sha256:b888778e3d5a8a429d0b4729265d39c4f4ad0ca720632917a429a5c306f8f8a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQyMTE0M2VjYjRjZjFmYjc1YjAzMWU1MDhkNmJkYjQzNjVhODRhODJkMmQ3N2ZmZmRlNmUyNTk3YzIzMmRhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZiMzRhODQyNjBkZjczMmNmNDExOWMxZGU4M2Q5ZTg1ZmYxNWU5NjBjYzBjZDFiZTk1ZTRjYmEzM2I1OGVlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/port/outbound/SaveTaskPort.kt#L5-L7",
+          "version": "repo-lines-v1:sha256:99f0260964807b5608beaf040a98a9808d3c53f220734dce7b968be1a36553f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY1OTQ0NTRlYWRhNmU1ZmUzYjNiMDQ5Mzc1NTBkNDc0NzgwMzg2YzkzZTA2YTU0YzA5ZjFiMDEwMjk2MDJjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZiMzRhODQyNjBkZjczMmNmNDExOWMxZGU4M2Q5ZTg1ZmYxNWU5NjBjYzBjZDFiZTk1ZTRjYmEzM2I1OGVlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L10-L12",
+          "version": "repo-lines-v1:sha256:70dfcd9a5bd050754745c3288bf06768614bae999cc92592ca8a2da86c062c12:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzdhYmMwMzU1NDFkMmZhZTU1Njg3NzQ5M2YxMzM2OWYzYTdlMDg2YTM2M2ZiNmI5OGJiMjBhNGU1OTljMzhhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTkwNjJjYzAyNDhkMjE5MDVhZjFjNmZhNmM0ZDc2ZTAwMWMxZWVhNWRlMWQ0YjVlZTY0ODJjNTZhNDM1NjFhMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDBiYTVlYmNjMTNmMWUxYzY0ZDJjNmE2MDM2YmI5ZDAxM2FhOGYwYWM5NTgxNTUzZjVhMWVkNTMyMjc4YWUyOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzhlMWY3YzUxMDc4ZTFhMzhkODE2Nzg4ZTU1NWUwODEwZjZlZDAxZWFjOWVkNTBhNDkzZDQ0OTA4OTQ0MWU2MCJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/LoadTasksService.kt#L10-L12",
+          "version": "repo-lines-v1:sha256:ce68442bf50551af293d2f88d1eb817a64cb777f142694913ff20c55f6f04397:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODE0OGUyOTA0YmIxNjFkYWUxZGNmODdmODc3OGVlMmRjN2EzNDU5N2FlNGY0MjA2MGRkOWIwM2I2M2U3OWU5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk2YTRmYWMxMGQwMTFlZWU3YmMyYTEyZjFmYzYxNmVjMTZiY2U4ODhlNTJhMTRlM2NlYzJjMDkxODc5YzM5OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDBiYTVlYmNjMTNmMWUxYzY0ZDJjNmE2MDM2YmI5ZDAxM2FhOGYwYWM5NTgxNTUzZjVhMWVkNTMyMjc4YWUyOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzM4ZmZhZWVlMWIwNDcwODU3YmQxYjljZGU4OWY5NjJhNGE5MDFhZGRkNmY3MmYxYjM3ODZhODBhNjAxM2U2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6afc88f42d0c45cfb859f89edc17cc8f",
+      "statement": "CreateTaskUseCase nests a CreateTaskCommand carrying only title and description, so callers never construct a domain Task; the service builds the Task and delegates to the save port.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/port/inbound/CreateTaskUseCase.kt#L3-L10",
+          "version": "repo-lines-v1:sha256:2acb7d7f67e68c7111efe1f3d63f3faf1e81692ada11711ffbffed0dd9b162ab:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDljYTUyYWE4MjZkYTg0MjYyZmVhMTVjMmE4ZjMzOWE0Nzc3Y2FhYWZmZmNlMjQ5M2I0ODdhOWVlOWVjYjkzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmQwNzAxZWI1ZDZjNWY5NzJlMjIwZTM4YjE4MzY2MGI3NGZlNzA1NmE4MzNhZTQwMTBiY2YyZTA3NjkyMjdiOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L16-L20",
+          "version": "repo-lines-v1:sha256:718978a54e7d16ca0dee229e3495c490b9b9e5da7e60f2d194e1a025fdecb91c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGIwZTg1YWU1ZTU5M2EyOThhM2E3ZGUxNjBkOTQ5ZjA4MWY4ZjhlNWRhN2U1YmVhN2NlMjUyMzEyYjc5ZTc2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzhlMWY3YzUxMDc4ZTFhMzhkODE2Nzg4ZTU1NWUwODEwZjZlZDAxZWFjOWVkNTBhNDkzZDQ0OTA4OTQ0MWU2MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNkYjBjNmQxMWFmMDdlMWVmMDE4MzM3MWE2N2JmOTkwYTQzOThmNDlmMTRkNzdhZmE1NzIzOWM1NGUzOTIwYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_39bf01dc5b174dfcaaca78de762c7b09",
+      "statement": "CDI wiring is resolved by type alone: services and the repository are @ApplicationScoped, services use constructor injection, controllers use @Inject field injection, and each port interface has exactly one implementing bean.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/inbound/LoadTasksController.kt#L15-L16",
+          "version": "repo-lines-v1:sha256:5c2e79085bfd3c92cd3a2d52baeb61de60cd9f2dec8b1b11dadf6f5d53c3d130:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTE0MThkMjdlYmU4NTNjZWQ3OWEyYjZhNDM4MTI5MDE2NGZjOGI3NWM1OGM3NjRjOGFiYzc2ZTRlNjA1MDg3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODA1ZTY1ODY4ZjRkMzliZWYzMWM3YjllOTAzZDBiNzNhYTE3ODM0NWQ0OWMyNWY4YzEzOTA5ZDZmYjM3ZGI3MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTViMjNiODc2YjFiMGI2OWE1MDAzNjNjN2Q5Y2UxZTg5ODhmY2MzZmUyODEzODIzMmU0MmFkMzE1NzQxYTBhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDc3ZjczZmZlNjFlMTVmNjc2OTMzNzJkYmUzMzA1MzZiMDBiMzJlMDhkNzAxZWMyNjc4NzFhYzhkNTJlZTRhZSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt#L8-L9",
+          "version": "repo-lines-v1:sha256:2bfcda66dc9188807e24967149f18fb9e00982b3b3b2d594cfbb5670cd62070a:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmNlYjMwN2ExNWNiOGRhZDQ4MmE0MjY0MDUxYjQ1MThlYjJmYTI1YjFmYTAwYjQ4MjBjNWI3MjI4ZTg4NjVhYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzMwODg2NDYzNjgxNTM2NDE0YzA1ODEzM2VhOTdhMTliZjFkM2NmMWI0YjVjMDAxNDNiNTFmNDgzMGEzOWIyYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGYzZjJhYTEyNDk1ZjMxZjdiMTk3MmY5ODc1YTk5OTlmMmFhNzlhMmZjYjFmZjNmZDI4ZTU3ZDFmNTRhODI2YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWRjNTcxMzA3NmMxODVmMDY3YjFkNjZjM2M2YzE3NWQ2N2FiMDVlNWZmYThlZGFhN2FjYjMyNmEwNjgwYWQ3OSJ9"
+        },
+        {
+          "resource": "repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt#L9-L12",
+          "version": "repo-lines-v1:sha256:a7601f8a94cb2fa0dea4c9c5f471cd30a6fe623ee19f91bf8abaf91a5019e9e6:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmNlYjMwN2ExNWNiOGRhZDQ4MmE0MjY0MDUxYjQ1MThlYjJmYTI1YjFmYTAwYjQ4MjBjNWI3MjI4ZTg4NjVhYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTkwNjJjYzAyNDhkMjE5MDVhZjFjNmZhNmM0ZDc2ZTAwMWMxZWVhNWRlMWQ0YjVlZTY0ODJjNTZhNDM1NjFhMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTljNWExMDY2Nzc2MzNkNWQ0MDA4NTQ5YTZkNGRmNjFlMTcwMTg2N2ZkNDU5OWZiYWNhYTU0OGU4ZGIxZmYzMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzhlMWY3YzUxMDc4ZTFhMzhkODE2Nzg4ZTU1NWUwODEwZjZlZDAxZWFjOWVkNTBhNDkzZDQ0OTA4OTQ0MWU2MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ce95100e526430baa4e9f4b5344dacd",
+      "statement": "The kotlin-allopen Gradle plugin opens classes annotated with jakarta.ws.rs.Path, jakarta.enterprise.context.ApplicationScoped, and io.quarkus.test.junit.QuarkusTest so Quarkus Arc can proxy them without explicit open modifiers.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle.kts#L22-L26",
+          "version": "repo-lines-v1:sha256:8f8d19994ccbd4baca12070e46dce982964179bcd116a3a0680d6d520d49821a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDE2NTZhMmE3ZjE1MDUwZjk3ZGIwNmQ5ZmY3NzM2NGIyYjY2MDAwYjA1MGY1YTMwMGM2ZjFiY2Y3YjlhN2MxYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWU5MThmYzI5YmNlNjIyODhhODkwY2Q4MDllMzVmOTNlZmVjZTZmNjg0OThjNThhNTZiNDcyMWM1M2Y5NzAwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDkzMTA1Zjk4Njk0NjkzZDM4NjI2MjcyY2E2NGZlMjg5ODgyYTBhYTRhZTY5OGQ4ODMzNTA5YzY2NzEyMzE0NyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-16T13:49:10.171Z"
+  }
+}
