@@ -5,7 +5,7 @@ description: The Task entity, how ids are generated, the outbound ports that abs
 tags: [domain, persistence, in-memory, task, ports]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-16T13:49:10.171Z
+    at: 2026-09-21T12:11:58.712Z
 sources:
   - id: openwiki-source-bdda6309cc2a0c360a18ef14
     resource: repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt

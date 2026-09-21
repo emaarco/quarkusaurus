@@ -5,7 +5,7 @@ description: The single static HTML page that Quarkus serves at the root URL, ho
 tags: [frontend, static-resources, javascript, ui, tasks]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-16T13:49:10.171Z
+    at: 2026-09-21T12:11:58.712Z
 sources:
   - id: openwiki-source-23775c3de52f3ab95a13cb8b
     resource: repo://README.md
