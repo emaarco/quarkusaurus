@@ -5,7 +5,7 @@ description: The /tasks HTTP API exposed by Quarkusaurus, covering the GET and P
 tags: [api, rest, jax-rs, tasks, controllers]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-16T13:49:10.171Z
+    at: 2026-09-21T12:11:58.712Z
 sources:
   - id: openwiki-source-636da7affb94401f679899e3
     resource: repo://.bruno/Create%20Task.bru

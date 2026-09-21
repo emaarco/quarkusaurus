@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:1c5fd8116f70efc6cf34133daa348d3fccb8673aaa3286614dffd919a5d8e122",
+  "pageVersion": "sha256:5c94b502b1a393d52d1d1f4abfb180c4fa5da9986730e52205cc10eaf62fe99f",
   "claims": [
     {
       "id": "claim_939d899771004ac8a66a918da666670f",
@@ -14,11 +14,11 @@
     },
     {
       "id": "claim_49283fe7b7a24d638837d7d4938ab47e",
-      "statement": "The Conductor run script starts quarkusDev with the HTTP port set to $CONDUCTOR_PORT and the JVM debug port to $CONDUCTOR_PORT + 1, and run_mode is concurrent, so multiple workspaces run side by side without port clashes.",
+      "statement": "The Conductor [scripts.run.app] script starts quarkusDev with the HTTP port set to $CONDUCTOR_PORT and the JVM debug port to $CONDUCTOR_PORT + 1 and is the default run action, while run_mode is concurrent, so multiple workspaces run side by side without port clashes.",
       "evidence": [
         {
-          "resource": "repo://.conductor/settings.toml#L5-L7",
-          "version": "repo-lines-v1:sha256:fd51220dfd68f72a7612c4502d582d7a293737a7a2af11da3ec363de14c1c566:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmVjMWZjM2IxMmY0NThmZDlmZDg3OTk5MTI4ZGM3ZGM4YWZlMmIyMTMxNDAwM2Y1ZDk5MDVkZTcxYTk4ZTY5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDYwYjkyNjFhNmQxYmEwY2YzNzQwZmYzNTYwMzUzZDc5YjNkNWQzODhlYmRlYjZmMWY1OWFlYTU1MGU3ZTIxNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjdiYmYxMDA0MGI0MDE3YjJiOWExY2ExOWRiMzAxYTE0NDI4Y2VlOTBiZmFiMTg5YmM0Y2QzZWE1NzliNzA1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+          "resource": "repo://.conductor/settings.toml#L6-L12",
+          "version": "repo-lines-v1:sha256:c1eef2d11ab3f374debecde0910780e1d56e65962b61d45354a6617115b88977:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDYwYjkyNjFhNmQxYmEwY2YzNzQwZmYzNTYwMzUzZDc5YjNkNWQzODhlYmRlYjZmMWY1OWFlYTU1MGU3ZTIxNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ1OWQ0YzMzYzU0YTQ4MWNmYjM4Y2MxMzZiNzY5ODIyMmNlNmQ5MTYwOTVkOTE4YmQ5YTFkNDczMDIxYmU5YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI1ZDg1NDFlZGY1MWVlYjc3MjdhMWIyMTQ2MTk3ODUyZWE5ZTk2ZDYzMWE4ZjBhOTg0MzUxYzRhZGMzOTBkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWVkZmFkZmMwNTZiZmNmNjk1NTU3NzcwYTUwZTkwMTQ2NTRmYWZmMzk5MjRhMzM2NzcxYmRmZDk2OGExYWVmMiJ9"
         }
       ]
     },
@@ -31,10 +31,20 @@
           "version": "repo-lines-v1:sha256:16153fcf05d6ed57e88911958b212865623baa568c814f88b966d43231c29b8b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNDBlNzkyNDRiNDMxYmU5MDQwMGRhZTkzYmYzMDRhZDg5Y2VlNWY2NjJkM2M1NGU5NGFkNWI3ZjVlNjkxNDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEwMWNjNWIzZDJmNGJjMDgyYjA5ZDg2YzYzNWQxYmFkOWY0NTdhYjNhZTg5OTQyZDVmZjZhOTQ2MDAxODU3OTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2ZjViNDBiMTU4NDU3ZDE3ODY0ZjIxNzkwNzg2ZGQ1YTJlY2RiNjRiNjZhNjUxZjc4OGQ0ZTI1Y2QzMzAzZDIifQ"
         }
       ]
+    },
+    {
+      "id": "claim_59332f9adf3f4d0d8c4750ca367d1df0",
+      "statement": "The Conductor [scripts.run.wiki] script runs `npx --yes openwiki@0.5.2 visualize openwiki --port $((CONDUCTOR_PORT + 2)) --no-open` to serve the OpenWiki visualizer on a third workspace-specific port.",
+      "evidence": [
+        {
+          "resource": "repo://.conductor/settings.toml#L14-L17",
+          "version": "repo-lines-v1:sha256:e3fc1f9fd4903546445284e9a7ea5e1b2efee2ce4a14a24262560ec2612cdff7:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjUxNWViODY4MzdjYmU4OGE1ODMyMzhhYTA3MjUxZmIxNzNhNzFkNzBjODE0MTg0OTllZDM5OTNkMDQ0NzZjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc5MmJiOTk5NDE3Y2YxOWQxZjE3NDU0NDA0YjM5MzhlYjdlYjU3NDYzMzJkYzA4N2Y2OWI1NWNlNDQ2ZTAxNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzdmN2MxMjllMWE4NzUwYjQwN2ZjMjI3NTY0NTRhNmMyZTI5NWQzODI0MjczYjhmNDk4Yjc1MTkwYTQ4OGFmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.5.2",
-    "at": "2026-09-16T13:49:10.171Z"
+    "at": "2026-09-21T12:11:58.712Z"
   }
 }

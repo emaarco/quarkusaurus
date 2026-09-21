@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:c05a7e079b4b6df086036b3a5c522f01c996c1a597fcfd990e4064c1df939da7",
+  "pageVersion": "sha256:8e6364dcb498064e3fd55c39f728b38a6481a3dd0490499539675a399849f993",
   "claims": [
     {
       "id": "claim_e0a5672a6b6941c3baeff7cf2fae297d",
@@ -38,11 +38,11 @@
     },
     {
       "id": "claim_185e7a7556c941cbb2ae30aeabda30ce",
-      "statement": "application.properties is empty, so dev mode runs on Quarkus defaults (port 8080) and the port is overridden only via -Dquarkus.http.port, as the Conductor run script does.",
+      "statement": "application.properties is empty, so dev mode runs on Quarkus defaults (port 8080) and the port is overridden only via -Dquarkus.http.port, as the [scripts.run.app] command in the Conductor settings does.",
       "evidence": [
         {
-          "resource": "repo://.conductor/settings.toml#L5-L6",
-          "version": "repo-lines-v1:sha256:5a919f97b4c298deebaa64173f09ca820f15c6490c856ba8d0162297f8aaecd9:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmVjMWZjM2IxMmY0NThmZDlmZDg3OTk5MTI4ZGM3ZGM4YWZlMmIyMTMxNDAwM2Y1ZDk5MDVkZTcxYTk4ZTY5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgyYzQ3ODVlMmFkMjgwZjdhNDA0NzNlNDQyM2M0NjdjNjhhN2U4NjdkYWNiNzc4ZDliNjEyYTZmNThjZTljMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjdiYmYxMDA0MGI0MDE3YjJiOWExY2ExOWRiMzAxYTE0NDI4Y2VlOTBiZmFiMTg5YmM0Y2QzZWE1NzliNzA1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDYwYjkyNjFhNmQxYmEwY2YzNzQwZmYzNTYwMzUzZDc5YjNkNWQzODhlYmRlYjZmMWY1OWFlYTU1MGU3ZTIxNCJ9"
+          "resource": "repo://.conductor/settings.toml#L8-L12",
+          "version": "repo-lines-v1:sha256:ec0e12946c4da93d5e46df379f3a262b8a131c1a32fe1ea0b2349ff7b31b03a8:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWYzZTA0NzNjNzI5NDAwMDM1NTliNDdkMzg4OTBkZTU5M2I2ZTg2MjhlNDQ0ZTU3NWJjNDhmNDYyYzllMjBjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ1OWQ0YzMzYzU0YTQ4MWNmYjM4Y2MxMzZiNzY5ODIyMmNlNmQ5MTYwOTVkOTE4YmQ5YTFkNDczMDIxYmU5YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjlhN2YxMzYwNGJkYzU0NTI5NGVmNjY5OTk4NzQzYjBiY2I4MTlkYzYwNGU3M2MxODAxMmIyZGJhMmVhYzE4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWVkZmFkZmMwNTZiZmNmNjk1NTU3NzcwYTUwZTkwMTQ2NTRmYWZmMzk5MjRhMzM2NzcxYmRmZDk2OGExYWVmMiJ9"
         },
         {
           "resource": "repo://src/main/resources/application.properties",
@@ -85,6 +85,6 @@
   ],
   "verification": {
     "by": "openwiki/0.5.2",
-    "at": "2026-09-16T13:49:10.171Z"
+    "at": "2026-09-21T12:11:58.712Z"
   }
 }

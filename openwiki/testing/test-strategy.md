@@ -5,7 +5,7 @@ description: The two test layers of Quarkusaurus, RestAssured tests in JVM and p
 tags: [testing, quarkus-test, rest-assured, playwright, e2e, integration-test]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-16T13:49:10.171Z
+    at: 2026-09-21T12:11:58.712Z
 sources:
   - id: openwiki-source-2a9daaac1604f238ef4c63fb
     resource: repo://build.gradle.kts
