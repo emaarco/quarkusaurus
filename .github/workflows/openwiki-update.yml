@@ -49,7 +49,7 @@ jobs:
       - name: Update OpenWiki with Claude Code
         id: openwiki
         continue-on-error: true
-        uses: anthropics/claude-code-action@7b0b255830a1fab6e602658672acad11c12d841d # v1.0.226
+        uses: anthropics/claude-code-action@8ce9314fa9a404564fa7e954cd84f25bcba2b829 # v1.0.236
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Update this repository's OpenWiki for changes since its last successful run. Use the openwiki skill and the openwiki MCP server."
