@@ -5,7 +5,7 @@ description: The GitHub Actions workflows that build and test every pull request
 tags: [ci, github-actions, dependabot, automerge, openwiki, github-pages]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-10-05T13:40:49.515Z
+    at: 2026-11-02T14:49:19.155Z
 sources:
   - id: openwiki-source-1307a98427393d045f958ba3
     resource: repo://.github/CODEOWNERS
