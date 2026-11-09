@@ -5,7 +5,7 @@ description: The single static HTML page that Quarkus serves at the root URL, ho
 tags: [frontend, static-resources, javascript, ui, tasks]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-21T12:11:58.712Z
+    at: 2026-11-09T15:15:22.468Z
 sources:
   - id: openwiki-source-23775c3de52f3ab95a13cb8b
     resource: repo://README.md
@@ -13,7 +13,7 @@ sources:
     resource: repo://src/main/kotlin/de/emaarco/example/adapter/inbound/CreateTaskController.kt
   - id: openwiki-source-14ee5bd89f05e1ffdf3a141a
     resource: repo://src/main/resources/META-INF/resources/index.html
-generated: { by: "claude-code", at: "2026-09-16T13:49:10.171Z" }
+generated: { by: "claude-code", at: "2026-11-09T15:15:22.468Z" }
 ---
 
 # Dino To-Do Frontend
@@ -30,7 +30,7 @@ The page has three interactive regions, all identified by stable ids and labels 
 
 ## Talking to the API
 
-All requests go to the relative path `/tasks`, so the page works on whatever host and port the Quarkus server is bound to, including Conductor's per-workspace ports.
+All requests go to the relative path `/tasks`, so the page works on whatever host and port the Quarkus server is bound to, including a non-default `-Dquarkus.http.port`.
 
 ```mermaid
 sequenceDiagram
@@ -82,4 +82,4 @@ The Playwright suite in `e2e/tests/app.spec.js` drives this page as a user would
 
 - [Tasks REST API](../api/tasks-rest-api.md)
 - [Test Strategy](../testing/test-strategy.md)
-- [Conductor Workspaces](../operations/conductor-workspaces.md) for why relative URLs matter.
+- [Build and Run](../operations/build-and-run.md) for running on a custom port.
