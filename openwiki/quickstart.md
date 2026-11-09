@@ -5,7 +5,7 @@ description: What Quarkusaurus is, the commands to build, run, and test it, and 
 tags: [overview, quickstart, navigation, quarkus, kotlin]
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-21T12:11:58.712Z
+    at: 2026-11-09T15:15:22.468Z
 sources:
   - id: openwiki-source-2a9daaac1604f238ef4c63fb
     resource: repo://build.gradle.kts
@@ -19,7 +19,7 @@ sources:
     resource: repo://src/main/kotlin/de/emaarco/example/adapter/outbound/InMemoryTaskRepository.kt
   - id: openwiki-source-94dabaf0e1b66e77d76d432d
     resource: repo://src/main/kotlin/de/emaarco/example/application/service/CreateTaskService.kt
-generated: { by: "claude-code", at: "2026-09-16T13:49:10.171Z" }
+generated: { by: "claude-code", at: "2026-11-09T15:15:22.468Z" }
 ---
 
 # Quickstart
@@ -64,7 +64,6 @@ Controllers depend on use-case interfaces, services implement them and call outb
 | Add or run tests | [Test Strategy](testing/test-strategy.md) |
 | Configure Gradle, build native, or build a container | [Build and Run](operations/build-and-run.md) |
 | Understand CI, Dependabot, or the wiki automation | [CI and Repository Automation](operations/ci-and-automation.md) |
-| Run several workspaces in parallel with Conductor | [Conductor Workspaces](operations/conductor-workspaces.md) |
 
 ## Conventions to keep in mind
 

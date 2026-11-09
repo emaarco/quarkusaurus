@@ -4,8 +4,6 @@ title: Build and Run
 description: How the Gradle build is configured (version catalog, Quarkus and Kotlin plugins, allopen, Java 21 toolchain) and how to run Quarkusaurus in dev mode, as a packaged jar, as a native executable, or in a container.
 tags: [build, gradle, quarkus, native, docker, dev-mode]
 sources:
-  - id: openwiki-source-311b902b81b9fbe111c8359f
-    resource: repo://.conductor/settings.toml
   - id: openwiki-source-715dace563ef484b6e8bd1e2
     resource: repo://.dockerignore
   - id: openwiki-source-675360e25390fa88714021b6
@@ -22,10 +20,10 @@ sources:
     resource: repo://src/main/docker/Dockerfile.native
   - id: openwiki-source-ece093ad10b91f3da0b7e34f
     resource: repo://src/main/resources/application.properties
-generated: { by: "claude-code", at: "2026-09-21T12:11:58.712Z" }
+generated: { by: "claude-code", at: "2026-11-09T15:15:22.468Z" }
 verified:
   - by: openwiki/0.5.2
-    at: 2026-09-21T12:11:58.712Z
+    at: 2026-11-09T15:15:22.468Z
 ---
 
 # Build and Run
@@ -68,7 +66,7 @@ Adding a dependency means adding it to the catalog and, usually, to a bundle. De
 ./gradlew quarkusDev
 ```
 
-Starts the app on port 8080 with live reload and the Dev UI at `http://localhost:8080/q/dev/`. The Dino To-Do page is at `/` and the API at `/tasks`. The HTTP port can be overridden with `-Dquarkus.http.port=<port>`, which is how the `[scripts.run.app]` command in [Conductor](conductor-workspaces.md)'s `.conductor/settings.toml` runs several workspaces side by side.
+Starts the app on port 8080 with live reload and the Dev UI at `http://localhost:8080/q/dev/`. The Dino To-Do page is at `/` and the API at `/tasks`. The HTTP port can be overridden with `-Dquarkus.http.port=<port>`, which is useful for running several checkouts side by side.
 
 `application.properties` is empty, so every Quarkus setting is at its default.
 
@@ -110,6 +108,5 @@ These files and the accompanying `.dockerignore` still reference Maven's `target
 ## Related pages
 
 - [CI and Repository Automation](ci-and-automation.md) runs `./gradlew build` and the e2e suite on every pull request.
-- [Conductor Workspaces](conductor-workspaces.md) wraps dev mode with per-workspace ports.
 - [Test Strategy](../testing/test-strategy.md)
 - [Hexagonal Architecture](../architecture/hexagonal-architecture.md) for why allopen matters.

@@ -23,39 +23,32 @@
       "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2"
     },
     "/openwiki/frontend/dino-todo-ui.md": {
-      "gitHead": "887dcebea29976766b21fe3a3e39c4a7e023b174",
-      "sourceFingerprint": "sha256:d4f9dbcd0f98f1c2d2cfecab3777ea06155e9657ee81201075d650032cd5d372",
-      "pageVersion": "sha256:5ebab2f2386e9fd200e324ca1ab95bba123962db2cffb26a778f40efa2f6dd5d",
+      "pageVersion": "sha256:906eeaee25b5a4f4ec7ed5275704d62d47ee0db19ba0f3e99069e903b965bf1d",
       "completedBy": "claude-code",
-      "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2"
+      "completedRunId": "7eef37fb-4edb-4ae5-9b1a-5785fe8bf20d",
+      "gitHead": "2db99d9e4d556c2faa66f5838521362703c8e927",
+      "sourceFingerprint": "sha256:442dab48576ab8880a0a2c7b4e9c7110f71fa51e3cc8820fa4e627edd381b4c9"
     },
     "/openwiki/operations/build-and-run.md": {
-      "gitHead": "887dcebea29976766b21fe3a3e39c4a7e023b174",
-      "sourceFingerprint": "sha256:d4f9dbcd0f98f1c2d2cfecab3777ea06155e9657ee81201075d650032cd5d372",
-      "pageVersion": "sha256:8e6364dcb498064e3fd55c39f728b38a6481a3dd0490499539675a399849f993",
+      "pageVersion": "sha256:42d9d085fd9fee1552415dcfaeb0ef0b21137f4be09f626c1544132b30d962ec",
       "completedBy": "claude-code",
-      "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2"
+      "completedRunId": "7eef37fb-4edb-4ae5-9b1a-5785fe8bf20d",
+      "gitHead": "2db99d9e4d556c2faa66f5838521362703c8e927",
+      "sourceFingerprint": "sha256:442dab48576ab8880a0a2c7b4e9c7110f71fa51e3cc8820fa4e627edd381b4c9"
     },
     "/openwiki/operations/ci-and-automation.md": {
+      "gitHead": "b49f3e84887bc0a222b64df13dfe33d448002a2a",
+      "sourceFingerprint": "sha256:014638dcc779182ac8e47d8e4b25729eb6ea96d01017dba2e6ef53b97e1bb937",
       "pageVersion": "sha256:f9e853a17c3cf9a1a93bf2c0d2ff4fa50365636a334f21618d9486e4b0b55fe9",
       "completedBy": "claude-code",
-      "completedRunId": "da788f89-9d73-4e95-a41a-ce7abc12fda8",
-      "gitHead": "b49f3e84887bc0a222b64df13dfe33d448002a2a",
-      "sourceFingerprint": "sha256:014638dcc779182ac8e47d8e4b25729eb6ea96d01017dba2e6ef53b97e1bb937"
-    },
-    "/openwiki/operations/conductor-workspaces.md": {
-      "gitHead": "887dcebea29976766b21fe3a3e39c4a7e023b174",
-      "sourceFingerprint": "sha256:d4f9dbcd0f98f1c2d2cfecab3777ea06155e9657ee81201075d650032cd5d372",
-      "pageVersion": "sha256:5c94b502b1a393d52d1d1f4abfb180c4fa5da9986730e52205cc10eaf62fe99f",
-      "completedBy": "claude-code",
-      "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2"
+      "completedRunId": "da788f89-9d73-4e95-a41a-ce7abc12fda8"
     },
     "/openwiki/quickstart.md": {
-      "gitHead": "887dcebea29976766b21fe3a3e39c4a7e023b174",
-      "sourceFingerprint": "sha256:d4f9dbcd0f98f1c2d2cfecab3777ea06155e9657ee81201075d650032cd5d372",
-      "pageVersion": "sha256:e7c214f84fc2d9261d4b88e056d72eeee8114f62da3b9ee1f227eab492d66175",
+      "pageVersion": "sha256:5df355460f9c1139b15eebb09bbee58b83aecdbeb6003d8df5f281ff17ddc361",
       "completedBy": "claude-code",
-      "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2"
+      "completedRunId": "7eef37fb-4edb-4ae5-9b1a-5785fe8bf20d",
+      "gitHead": "2db99d9e4d556c2faa66f5838521362703c8e927",
+      "sourceFingerprint": "sha256:442dab48576ab8880a0a2c7b4e9c7110f71fa51e3cc8820fa4e627edd381b4c9"
     },
     "/openwiki/testing/test-strategy.md": {
       "gitHead": "887dcebea29976766b21fe3a3e39c4a7e023b174",
