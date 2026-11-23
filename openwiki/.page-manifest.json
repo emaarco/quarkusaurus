@@ -5,57 +5,57 @@
       "pageVersion": "sha256:fe9bcc5c02098508ba4bed6330258e9f36f7253d0d18103dfaceff625afe56f5",
       "completedBy": "claude-code",
       "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/architecture/hexagonal-architecture.md": {
       "pageVersion": "sha256:ad601ea4bf68addf505599d79bae4445d132968940e4a53f8dd7bf61ba7dec92",
       "completedBy": "claude-code",
       "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/architecture/task-domain-and-persistence.md": {
       "pageVersion": "sha256:fdc6b4fb90ede5ed24ce215af13946d74c201b6947186f614267f7bdb7c9cfbd",
       "completedBy": "claude-code",
       "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/frontend/dino-todo-ui.md": {
       "pageVersion": "sha256:906eeaee25b5a4f4ec7ed5275704d62d47ee0db19ba0f3e99069e903b965bf1d",
       "completedBy": "claude-code",
       "completedRunId": "7eef37fb-4edb-4ae5-9b1a-5785fe8bf20d",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/operations/build-and-run.md": {
       "pageVersion": "sha256:42d9d085fd9fee1552415dcfaeb0ef0b21137f4be09f626c1544132b30d962ec",
       "completedBy": "claude-code",
       "completedRunId": "7eef37fb-4edb-4ae5-9b1a-5785fe8bf20d",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/operations/ci-and-automation.md": {
       "pageVersion": "sha256:f9e853a17c3cf9a1a93bf2c0d2ff4fa50365636a334f21618d9486e4b0b55fe9",
       "completedBy": "claude-code",
       "completedRunId": "da788f89-9d73-4e95-a41a-ce7abc12fda8",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/quickstart.md": {
       "pageVersion": "sha256:5df355460f9c1139b15eebb09bbee58b83aecdbeb6003d8df5f281ff17ddc361",
       "completedBy": "claude-code",
       "completedRunId": "7eef37fb-4edb-4ae5-9b1a-5785fe8bf20d",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     },
     "/openwiki/testing/test-strategy.md": {
       "pageVersion": "sha256:48a51142d9be94870a7f3cf1341848acc95e37fd6b48a7a6bca2fe06c88f0915",
       "completedBy": "claude-code",
       "completedRunId": "01f33fca-06b5-45f1-a351-eee52bfce0c2",
-      "gitHead": "7885c4187f646b929117ae87695f7da185f2e434",
-      "sourceFingerprint": "sha256:8a7442358cb4f0b7eb74ae0696642db159f1113c8b100a85875a2f353c8129b8"
+      "gitHead": "dab45b45013d600233a9ec291d6004b33ea15cb9",
+      "sourceFingerprint": "sha256:386e1674645ef93e34ce34f83ddd48be8c1c4f6b91a91ae8b3848a2603565413"
     }
   }
 }
